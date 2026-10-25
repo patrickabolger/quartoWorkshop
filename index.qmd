@@ -387,7 +387,7 @@ plot(mtcars$wt, mtcars$mpg)
 
 - Fenced by three backticks
 - `{r}` identifies the language^[This would be `{python}`, `{julia}`, and `{ojs}` for *python*, *julia*, and *Observable JS*, respectively]
-- `#|` lines are chunk options^[The `eval: false` in the chunk options (`#|`) at top tells *R* not to run the code. You wouldn't normally include this option in a finished product unless you were teaching.]
+- `#|` lines are chunk options^[The `eval: false` in the chunk options (`#|`) at top tells *R* not to run the code in that chunk. You wouldn't normally include this option in a finished product unless you were teaching.]
 - Output appears in the rendered document
 
 ## One source, different outputs
@@ -525,9 +525,11 @@ results, sources or packages. Finish with a three-item render checklist.
 1. Inspect the response for invented claims or unnecessary packages
 2. Copy only the contents inside the code fence
 3. In *RStudio*, create **File → New File → Quarto Document**
-4. Replace the starter text and save as `my-document.qmd`
-5. Select **Render**
-6. Read the first error carefully, revise, and render again
+4. Delete all the starter text and save as `my-document.qmd`
+5. Paste the contents from *Copilot*
+6. Save
+7. Select **Render**
+8. Read the first error carefully, revise, and render again
 
 ## Debugging prompts
 
@@ -573,3 +575,16 @@ Copilot can draft the source. You remain responsible for the content, code, evid
 - Code blocks make results reproducible
 - Copilot can accelerate a minimal first draft
 - Rendering and checking remain human tasks
+
+## Useful links
+
+- [Quarto](https://quarto.org/){target="_blank"}
+- [R Markdown](https://rmarkdown.rstudio.com/){target="_blank"}
+
+### LinkedIn Learning (where you can earn badges to put on your CV)
+
+- [Complete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcomplete-guide-to-r-wrangling-visualizing-and-modeling-data%3Ftrk%3Dshare_ent_url%26shareId%3DpHygdm9ASziZV%252FewsqPBWw%253D%253D){target="_blank"}
+- [Learning the R Tidyverse](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-the-r-tidyverse-24332729%3Ftrk%3Dshare_ent_url%26shareId%3Dm0xWIVqXR8quPBvRAJbm%252BQ%253D%253D){target="_blank"}
+- [Learning Markdown: Formatting Text without the Complexity](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-markdown-formatting-text-without-the-complexity%3Ftrk%3Dshare_ent_url%26shareId%3DVBhsFETRQ8SBoZTINms4tg%253D%253D){target="_blank"}
+- [Git Essential Training](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fgit-essential-training-25677984%3Ftrk%3Dshare_ent_url%26shareId%3D%252Bd4xxHopRxGlDGHqJseccQ%253D%253D){target="_blank"}
+

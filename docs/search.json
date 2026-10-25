@@ -1,0 +1,191 @@
+[
+  {
+    "objectID": "index.html#two-short-halves",
+    "href": "index.html#two-short-halves",
+    "title": "From analysis to communication with Quarto",
+    "section": "Two short halves",
+    "text": "Two short halves\n\n\nFirst 30 minutes: Introduction\n\nCommunication tools\nMarkdown essentials\nQuarto file structure\n\n\nFinal 30 minutes: Practice\n\nChoose a document\nPrompt MS Copilot\nSave as .qmd\nRender, inspect, refine"
+  },
+  {
+    "objectID": "index.html#visual-editors",
+    "href": "index.html#visual-editors",
+    "title": "From analysis to communication with Quarto",
+    "section": "Visual editors",
+    "text": "Visual editors\n\n\nExamples\n\nWord\nPowerPoint\nGoogle Docs\nCanva\n\n\nDownsides\n\nproprietary\nlocal formatting\n\n\nUpsides\n\nWYSIWYG\neasy to learn"
+  },
+  {
+    "objectID": "index.html#mark-up-systems",
+    "href": "index.html#mark-up-systems",
+    "title": "From analysis to communication with Quarto",
+    "section": "Mark-up systems",
+    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\n“steep” learning curve1\nrendering time\n\n\nTechnically, a shallow learning curve"
+  },
+  {
+    "objectID": "index.html#markdown",
+    "href": "index.html#markdown",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown",
+    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Schwartz\nfelt raw html was too onerous to use\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts to html\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\neasy learning curve\nalmost instant rendering"
+  },
+  {
+    "objectID": "index.html#scientific-publishing-systems",
+    "href": "index.html#scientific-publishing-systems",
+    "title": "From analysis to communication with Quarto",
+    "section": "Scientific publishing systems",
+    "text": "Scientific publishing systems\nCombine prose, code, and output specifications\n\n\nFor today (part of RStudio)\n\nR Markdown\nQuarto\n\n\nOthers\n\nJupyter Notebooks\nJupyter Books\nMyST Markdown"
+  },
+  {
+    "objectID": "index.html#r-markdown-and-quarto",
+    "href": "index.html#r-markdown-and-quarto",
+    "title": "From analysis to communication with Quarto",
+    "section": "R Markdown and Quarto",
+    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nTight integration with R\nStill widely used\n\n\nQuarto\n\nNewer, language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nDocuments, slides, websites, books, dashboards"
+  },
+  {
+    "objectID": "index.html#a-typical-workflow-for-quarto-and-r-markdown",
+    "href": "index.html#a-typical-workflow-for-quarto-and-r-markdown",
+    "title": "From analysis to communication with Quarto",
+    "section": "A typical workflow for Quarto and R Markdown",
+    "text": "A typical workflow for Quarto and R Markdown\n\nCreate a Quarto or R Markdown file in RStudio\nAdd\n\nRequired\n\nYAML header\n\nAnd one, or the other, or both\n\nMarkdown\ncode (or Python, etc.)\n\n\nSelect Render\nThe chosen output is rendered\nIf neessary, edit the source, then render again"
+  },
+  {
+    "objectID": "index.html#markdown-headings",
+    "href": "index.html#markdown-headings",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: headings",
+    "text": "Markdown: headings\n\nRendered in a browserraw html"
+  },
+  {
+    "objectID": "index.html#markdown-emphasis",
+    "href": "index.html#markdown-emphasis",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: emphasis",
+    "text": "Markdown: emphasis\n\n\nRaw Markdown\n*italics*\n\n**boldface**\n\n***bold italics***\n\n`inline code like sd(data$reactionTimes`\n\nRendered\nitalics\nboldface\nbold italics\ninline code"
+  },
+  {
+    "objectID": "index.html#markdown-bullet-points",
+    "href": "index.html#markdown-bullet-points",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: bullet points",
+    "text": "Markdown: bullet points\n\n\nRaw Markdown\n- First point\n- Second point\n  - Nested point\n- Third point\n\nRendered\n\nFirst point\nSecond point\n\nNested point\n\nThird point"
+  },
+  {
+    "objectID": "index.html#markdown-quotations",
+    "href": "index.html#markdown-quotations",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: quotations",
+    "text": "Markdown: quotations\n\n\nRaw Markdown\n&gt; Good communication makes\n&gt; analysis useful.\n\nRendered\n\nGood communication makes analysis useful."
+  },
+  {
+    "objectID": "index.html#markdown-formulas-with-latex",
+    "href": "index.html#markdown-formulas-with-latex",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: formulas (with LaTeX)",
+    "text": "Markdown: formulas (with LaTeX)\nLaTeX in Markdown\nThis is the *F*-ratio: $F=\\frac{MS_{between}}{MS_{within}}$\n\nAnd in a little more detail:\n$$\nF=\\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}\n$$\nRendered\nThis is the F-ratio: \\(F=\\frac{MS_{between}}{MS_{within}}\\)\nAnd in a little more detail: \\[\nF=\\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}\n\\]"
+  },
+  {
+    "objectID": "index.html#anatomy-of-a-.qmd-file",
+    "href": "index.html#anatomy-of-a-.qmd-file",
+    "title": "From analysis to communication with Quarto",
+    "section": "Anatomy of a .qmd file",
+    "text": "Anatomy of a .qmd file\n---\ntitle: \"My report\"\nformat: html\n---\n\n(above is the YAML header)\n\n# Introduction\n\nThis is the **Markdown area**.\n\n(below is a code chunk)\n\n`{r}\nsummary(mtcars)\n`"
+  },
+  {
+    "objectID": "index.html#yaml-header",
+    "href": "index.html#yaml-header",
+    "title": "From analysis to communication with Quarto",
+    "section": "1. YAML header",
+    "text": "1. YAML header\n\n\n---\ntitle: \"Student wellbeing summary\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat:\n  html:\n    toc: true\n---\n\n\nLocated at the very top of the file\nBegins and ends with ---\nStores document metadata and output settings\nIndentation matters (as in Python)"
+  },
+  {
+    "objectID": "index.html#markdown-area",
+    "href": "index.html#markdown-area",
+    "title": "From analysis to communication with Quarto",
+    "section": "2. Markdown area",
+    "text": "2. Markdown area\n# Introduction\n\nThis report summarises a small survey.\n\n## Key findings\n\n- Most respondents reported...\n- The clearest pattern was...\n\nProse and structure\nImages, simple tables, links, and citations\nReadable before rendering"
+  },
+  {
+    "objectID": "index.html#code-blocks",
+    "href": "index.html#code-blocks",
+    "title": "From analysis to communication with Quarto",
+    "section": "3. Code blocks",
+    "text": "3. Code blocks\n\n```{r}\n#| eval: false\n#| label: fig-scatter\n#| fig-cap: \"Miles per gallon by weight\"\n\nplot(mtcars$wt, mtcars$mpg)\n```\n\n\nFenced by three backticks\n{r} identifies the language1\n#| lines are chunk options2\nOutput appears in the rendered document\n\nThis would be {python}, {julia}, and {ojs} for python, julia, and Observable JS, respectivelyThe eval: false in the chunk options (#|) at top tells R not to run the code in that chunk. You wouldn’t normally include this option in a finished product unless you were teaching."
+  },
+  {
+    "objectID": "index.html#one-source-different-outputs",
+    "href": "index.html#one-source-different-outputs",
+    "title": "From analysis to communication with Quarto",
+    "section": "One source, different outputs",
+    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  pdf: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. the easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX."
+  },
+  {
+    "objectID": "index.html#your-task-choose-a-minimal-document",
+    "href": "index.html#your-task-choose-a-minimal-document",
+    "title": "From analysis to communication with Quarto",
+    "section": "Your task: choose a minimal document",
+    "text": "Your task: choose a minimal document\n\n\nPick one output:\n\nHTML page with a table of contents\n\nI recommend this\n\nWord report\nrevealjs slide deck\npdfs require LaTeX\n\nuse the tinytex package in R\nbut not today\n\n\n\nChoose a small, familiar topic. Aim for:\n\nA title and format (YAML header)\nTwo or three sections (Markdown)\nOne short R code block (code chunk)"
+  },
+  {
+    "objectID": "index.html#in-rstudio",
+    "href": "index.html#in-rstudio",
+    "title": "From analysis to communication with Quarto",
+    "section": "In RStudio",
+    "text": "In RStudio\n\nFile &gt; New Project\nFile &gt; New File &gt; Quarto Document (or Quarto Presentation)\n\nThis distinctions are just for initial convenience\nThe output: line in the YAML header determines the document output"
+  },
+  {
+    "objectID": "index.html#build-the-prompt-from-four-parts",
+    "href": "index.html#build-the-prompt-from-four-parts",
+    "title": "From analysis to communication with Quarto",
+    "section": "Build the prompt from four parts",
+    "text": "Build the prompt from four parts\n\nGoal: what should Copilot create?\nContext: audience and purpose\nSource: content, data or code to use\nExpectations: exact format and constraints\n\n\n\n\n\n\n\nTip\n\n\nAsk for the complete .qmd source in one fenced code block, with no missing sections and no invented data."
+  },
+  {
+    "objectID": "index.html#copilot-prompt-template",
+    "href": "index.html#copilot-prompt-template",
+    "title": "From analysis to communication with Quarto",
+    "section": "Copilot prompt template",
+    "text": "Copilot prompt template\nCreate a minimal Quarto document for [AUDIENCE] about [TOPIC].\nIt will be edited and rendered in RStudio.\n\nOutput format: [html / docx / pdf / revealjs].\nInclude: [TITLE], [2–3 SECTIONS], and one short R code block that\nuses [BUILT-IN DATA / CODE I PROVIDE].\n\nRequirements:\n- Return the complete contents of one .qmd file.\n- Put the entire file in one fenced code block.\n- Include a valid YAML header.\n- Use simple Markdown.\n- Use only packages and data named in this prompt.\n- Do not invent results or references.\n- Keep it short enough to inspect line by line.\n- After the code block, give a three-item render checklist."
+  },
+  {
+    "objectID": "index.html#example-student-prompt",
+    "href": "index.html#example-student-prompt",
+    "title": "From analysis to communication with Quarto",
+    "section": "Example student prompt",
+    "text": "Example student prompt\nCreate a minimal Quarto HTML document for first-year psychology\nstudents about the relationship between sleep and concentration.\nIt will be edited and rendered in RStudio.\n\nInclude a title, a short introduction, two sections, and one R code\nblock using only the built-in mtcars data to demonstrate a scatterplot.\nExplain clearly that the dataset is only a coding demonstration and\nis not evidence about sleep or concentration.\n\nReturn one complete .qmd file in one fenced code block. Include a valid\nYAML header with a table of contents. Use simple Markdown. Do not invent\nresults, sources or packages. Finish with a three-item render checklist."
+  },
+  {
+    "objectID": "index.html#from-copilot-to-rstudio",
+    "href": "index.html#from-copilot-to-rstudio",
+    "title": "From analysis to communication with Quarto",
+    "section": "From Copilot to RStudio",
+    "text": "From Copilot to RStudio\n\nInspect the response for invented claims or unnecessary packages\nCopy only the contents inside the code fence\nIn RStudio, create File → New File → Quarto Document\nDelete all the starter text and save as my-document.qmd\nPaste the contents from Copilot\nSave\nSelect Render\nRead the first error carefully, revise, and render again"
+  },
+  {
+    "objectID": "index.html#debugging-prompts",
+    "href": "index.html#debugging-prompts",
+    "title": "From analysis to communication with Quarto",
+    "section": "Debugging prompts",
+    "text": "Debugging prompts\nIf rendering fails, paste the exact error into Copilot:\nThis Quarto document fails to render. Explain the first error in plain\nEnglish, then return the smallest corrected version. Do not add new\npackages or features.\n\n[PASTE ERROR]\n\n[PASTE .QMD]\nIf rendering works but looks poor:\nKeep the content and output format unchanged. Improve only the headings,\nspacing and chunk options. Return the complete revised .qmd file."
+  },
+  {
+    "objectID": "index.html#before-you-finish",
+    "href": "index.html#before-you-finish",
+    "title": "From analysis to communication with Quarto",
+    "section": "Before you finish",
+    "text": "Before you finish\n\nValid YAML header\nClosing backticks present\nRequired packages installed\nData actually available\nOutput renders\nClaims checked by you\nFile names sensible\n\n\n\n\n\n\n\nImportant\n\n\nCopilot can draft the source. You remain responsible for the content, code, evidence and final output."
+  },
+  {
+    "objectID": "index.html#take-away",
+    "href": "index.html#take-away",
+    "title": "From analysis to communication with Quarto",
+    "section": "Take-away",
+    "text": "Take-away\nQuarto turns a readable source file into professional communication.\n\nMarkdown provides structure\nYAML controls the output\nCode blocks make results reproducible\nCopilot can accelerate a minimal first draft\nRendering and checking remain human tasks"
+  },
+  {
+    "objectID": "index.html#useful-links",
+    "href": "index.html#useful-links",
+    "title": "From analysis to communication with Quarto",
+    "section": "Useful links",
+    "text": "Useful links\n\nQuarto\nR Markdown\n\nLinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training"
+  }
+]

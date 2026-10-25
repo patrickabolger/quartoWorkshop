@@ -1105,15 +1105,14 @@ Patrick Bolger
 <h2>Two short halves</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<h3 id="first-30-minutes">First 30 minutes</h3>
+<h3 id="first-30-minutes-introduction">First 30 minutes: Introduction</h3>
 <ul>
 <li>Communication tools</li>
 <li>Markdown essentials</li>
-<li>Anatomy of a <code>.qmd</code> file</li>
-<li>Useful output formats</li>
+<li><em>Quarto</em> file structure</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<h3 id="final-30-minutes">Final 30 minutes</h3>
+<h3 id="final-30-minutes-practice">Final 30 minutes: Practice</h3>
 <ul>
 <li>Choose a document</li>
 <li>Prompt MS Copilot</li>
@@ -1294,13 +1293,13 @@ Patrick Bolger
 <div class="columns">
 <div class="column" style="width:48%;">
 <h3 id="raw-markdown">Raw Markdown</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href></a>*italics*</span>
-<span id="cb1-2"><a href></a></span>
-<span id="cb1-3"><a href></a>**boldface**</span>
-<span id="cb1-4"><a href></a></span>
-<span id="cb1-5"><a href></a>***bold italics***</span>
-<span id="cb1-6"><a href></a></span>
-<span id="cb1-7"><a href></a><span class="in">`inline code like sd(data$reactionTimes`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a></a>*italics*</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a>**boldface**</span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a>***bold italics***</span>
+<span id="cb1-6"><a></a></span>
+<span id="cb1-7"><a></a><span class="in">`inline code like sd(data$reactionTimes`</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:48%;">
 <h3 id="rendered">Rendered</h3>
 <p><em>italics</em></p>
@@ -1314,10 +1313,10 @@ Patrick Bolger
 <div class="columns">
 <div class="column" style="width:48%;">
 <h3 id="raw-markdown-1">Raw Markdown</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href></a><span class="ss">- </span>First point</span>
-<span id="cb2-2"><a href></a><span class="ss">- </span>Second point</span>
-<span id="cb2-3"><a href></a><span class="ss">  - </span>Nested point</span>
-<span id="cb2-4"><a href></a><span class="ss">- </span>Third point</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a><span class="ss">- </span>First point</span>
+<span id="cb2-2"><a></a><span class="ss">- </span>Second point</span>
+<span id="cb2-3"><a></a><span class="ss">  - </span>Nested point</span>
+<span id="cb2-4"><a></a><span class="ss">- </span>Third point</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:48%;">
 <h3 id="rendered-1">Rendered</h3>
 <ul>
@@ -1335,8 +1334,8 @@ Patrick Bolger
 <div class="columns">
 <div class="column" style="width:48%;">
 <h3 id="raw-markdown-2">Raw Markdown</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href></a><span class="at">&gt; Good communication makes</span></span>
-<span id="cb3-2"><a href></a><span class="at">&gt; analysis useful.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="at">&gt; Good communication makes</span></span>
+<span id="cb3-2"><a></a><span class="at">&gt; analysis useful.</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:48%;">
 <h3 id="rendered-2">Rendered</h3>
 <blockquote>
@@ -1347,12 +1346,12 @@ Patrick Bolger
 <section id="markdown-formulas-with-latex" class="slide level2">
 <h2>Markdown: formulas (with LaTeX)</h2>
 <h3 id="latex-in-markdown">LaTeX in Markdown</h3>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href></a>This is the *F*-ratio: $F=\frac{MS_{between}}{MS_{within}}$</span>
-<span id="cb4-2"><a href></a></span>
-<span id="cb4-3"><a href></a>And in a little more detail:</span>
-<span id="cb4-4"><a href></a>$$</span>
-<span id="cb4-5"><a href></a>F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}</span>
-<span id="cb4-6"><a href></a>$$</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a></a>This is the *F*-ratio: $F=\frac{MS_{between}}{MS_{within}}$</span>
+<span id="cb4-2"><a></a></span>
+<span id="cb4-3"><a></a>And in a little more detail:</span>
+<span id="cb4-4"><a></a>$$</span>
+<span id="cb4-5"><a></a>F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}</span>
+<span id="cb4-6"><a></a>$$</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <h3 id="rendered-3">Rendered</h3>
 <p>This is the <em>F</em>-ratio: <span class="math inline">\(F=\frac{MS_{between}}{MS_{within}}\)</span></p>
 <p>And in a little more detail: <span class="math display">\[
@@ -1360,41 +1359,41 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 \]</span></p>
 </section></section>
 <section>
-<section id="quarto-files" class="title-slide slide level1 center">
-<h1>Quarto files</h1>
+<section id="quarto-file-structure" class="title-slide slide level1 center">
+<h1>Quarto file structure</h1>
 
 </section>
 <section id="anatomy-of-a-.qmd-file" class="slide level2">
 <h2>Anatomy of a <code>.qmd</code> file</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href></a><span class="co">---</span></span>
-<span id="cb5-2"><a href></a><span class="an">title:</span><span class="co"> &quot;My report&quot;</span></span>
-<span id="cb5-3"><a href></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb5-4"><a href></a><span class="co">---</span></span>
-<span id="cb5-5"><a href></a></span>
-<span id="cb5-6"><a href></a>(above is the YAML header)</span>
-<span id="cb5-7"><a href></a></span>
-<span id="cb5-8"><a href></a><span class="fu"># Introduction</span></span>
-<span id="cb5-9"><a href></a></span>
-<span id="cb5-10"><a href></a>This is the **Markdown area**.</span>
-<span id="cb5-11"><a href></a></span>
-<span id="cb5-12"><a href></a>(below is a code chunk)</span>
-<span id="cb5-13"><a href></a></span>
-<span id="cb5-14"><a href></a>`{r}</span>
-<span id="cb5-15"><a href></a>summary(mtcars)</span>
-<span id="cb5-16"><a href></a>`</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a><span class="co">---</span></span>
+<span id="cb5-2"><a></a><span class="an">title:</span><span class="co"> &quot;My report&quot;</span></span>
+<span id="cb5-3"><a></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb5-4"><a></a><span class="co">---</span></span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a>(above is the YAML header)</span>
+<span id="cb5-7"><a></a></span>
+<span id="cb5-8"><a></a><span class="fu"># Introduction</span></span>
+<span id="cb5-9"><a></a></span>
+<span id="cb5-10"><a></a>This is the **Markdown area**.</span>
+<span id="cb5-11"><a></a></span>
+<span id="cb5-12"><a></a>(below is a code chunk)</span>
+<span id="cb5-13"><a></a></span>
+<span id="cb5-14"><a></a>`{r}</span>
+<span id="cb5-15"><a></a>summary(mtcars)</span>
+<span id="cb5-16"><a></a>`</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="yaml-header" class="slide level2">
 <h2>1. YAML header</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a href></a><span class="pp">---</span></span>
-<span id="cb6-2"><a href></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Student wellbeing summary&quot;</span></span>
-<span id="cb6-3"><a href></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
-<span id="cb6-4"><a href></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb6-5"><a href></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb6-6"><a href></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb6-7"><a href></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb6-8"><a href></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb6-1"><a></a><span class="pp">---</span></span>
+<span id="cb6-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Student wellbeing summary&quot;</span></span>
+<span id="cb6-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
+<span id="cb6-4"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb6-5"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb6-6"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb6-7"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb6-8"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:60%;">
 <ul>
 <li>Located at the very top of the file</li>
@@ -1406,14 +1405,14 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </section>
 <section id="markdown-area" class="slide level2">
 <h2>2. Markdown area</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href></a><span class="fu"># Introduction</span></span>
-<span id="cb7-2"><a href></a></span>
-<span id="cb7-3"><a href></a>This report summarises a small survey.</span>
-<span id="cb7-4"><a href></a></span>
-<span id="cb7-5"><a href></a><span class="fu">## Key findings</span></span>
-<span id="cb7-6"><a href></a></span>
-<span id="cb7-7"><a href></a><span class="ss">- </span>Most respondents reported...</span>
-<span id="cb7-8"><a href></a><span class="ss">- </span>The clearest pattern was...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="fu"># Introduction</span></span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a>This report summarises a small survey.</span>
+<span id="cb7-4"><a></a></span>
+<span id="cb7-5"><a></a><span class="fu">## Key findings</span></span>
+<span id="cb7-6"><a></a></span>
+<span id="cb7-7"><a></a><span class="ss">- </span>Most respondents reported...</span>
+<span id="cb7-8"><a></a><span class="ss">- </span>The clearest pattern was...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Prose and structure</li>
 <li>Images, simple tables, links, and citations</li>
@@ -1423,13 +1422,13 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <section id="code-blocks" class="slide level2">
 <h2>3. Code blocks</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href></a><span class="in">```{r}</span></span>
-<span id="cb8-2"><a href></a><span class="co">#| eval: false</span></span>
-<span id="cb8-3"><a href></a><span class="co">#| label: fig-scatter</span></span>
-<span id="cb8-4"><a href></a><span class="co">#| fig-cap: &quot;Miles per gallon by weight&quot;</span></span>
-<span id="cb8-5"><a href></a></span>
-<span id="cb8-6"><a href></a><span class="fu">plot</span>(mtcars<span class="sc">$</span>wt, mtcars<span class="sc">$</span>mpg)</span>
-<span id="cb8-7"><a href></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb8-2"><a></a><span class="co">#| eval: false</span></span>
+<span id="cb8-3"><a></a><span class="co">#| label: fig-scatter</span></span>
+<span id="cb8-4"><a></a><span class="co">#| fig-cap: &quot;Miles per gallon by weight&quot;</span></span>
+<span id="cb8-5"><a></a></span>
+<span id="cb8-6"><a></a><span class="fu">plot</span>(mtcars<span class="sc">$</span>wt, mtcars<span class="sc">$</span>mpg)</span>
+<span id="cb8-7"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Fenced by three backticks</li>
@@ -1437,30 +1436,30 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><code>#|</code> lines are chunk options<sup>2</sup></li>
 <li>Output appears in the rendered document</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn2"><p>This would be <code>{python}</code>, <code>{julia}</code>, and <code>{ojs}</code> for <em>python</em>, <em>julia</em>, and <em>Observable JS</em>, respectively</p></li><li id="fn3"><p>The <code>eval: false</code> in the chunk options (<code>#|</code>) at top tells <em>R</em> not to run the code. You wouldn’t normally include this option in a finished product unless you were teaching.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn2"><p>This would be <code>{python}</code>, <code>{julia}</code>, and <code>{ojs}</code> for <em>python</em>, <em>julia</em>, and <em>Observable JS</em>, respectively</p></li><li id="fn3"><p>The <code>eval: false</code> in the chunk options (<code>#|</code>) at top tells <em>R</em> not to run the code in that chunk. You wouldn’t normally include this option in a finished product unless you were teaching.</p></li></ol></aside></section>
 <section id="one-source-different-outputs" class="slide level2">
 <h2>One source, different outputs</h2>
 <p>Change the YAML rather than rewriting the content</p>
 <div class="columns">
 <div class="column" style="width:32%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a href></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
-<span id="cb9-2"><a href></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
-<span id="cb9-3"><a href></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb9-4"><a href></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb9-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
+<span id="cb9-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
+<span id="cb9-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb9-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:32%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a href></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
-<span id="cb10-2"><a href></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
-<span id="cb10-3"><a href></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb10-4"><a href></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb10-5"><a href></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb10-6"><a href></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
+<span id="cb10-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
+<span id="cb10-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb10-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb10-5"><a></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb10-6"><a></a><span class="at">  </span><span class="fu">pdf</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:32%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a href></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
-<span id="cb11-2"><a href></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
-<span id="cb11-3"><a href></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb11-4"><a href></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb11-5"><a href></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb11-6"><a href></a><span class="at">  </span><span class="fu">pptx</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
+<span id="cb11-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
+<span id="cb11-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb11-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb11-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb11-6"><a></a><span class="at">  </span><span class="fu">pptx</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -1488,26 +1487,11 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </div>
 </div>
 </div>
-</section>
-<section id="example-revealjs-slide-deck" class="slide level2">
-<h2>Example: revealjs slide deck</h2>
-<p>This is a revealjs slide deck</p>
-</section>
-<section id="example-web-page-with-a-toc" class="slide level2">
-<h2>Example: web page with a TOC</h2>
-<!-- Add a link or screenshot from the Quarto Gallery here. -->
-<div class="example-placeholder">
-<p><strong>Gallery example placeholder</strong></p>
-<p>Add your chosen HTML article or report example and link.</p>
-</div>
-</section>
-<section id="example-online-book" class="slide level2">
-<h2>Example: online book</h2>
-<!-- Add a link or screenshot from the Quarto Gallery here. -->
-<div class="example-placeholder">
-<p><strong>Gallery example placeholder</strong></p>
-<p>Add your chosen <em>Quarto</em> book example and link.</p>
-</div>
+</section></section>
+<section>
+<section id="practice" class="title-slide slide level1 center">
+<h1>Practice</h1>
+
 </section>
 <section id="your-task-choose-a-minimal-document" class="slide level2">
 <h2>Your task: choose a minimal document</h2>
@@ -1515,7 +1499,10 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <div class="column">
 <p>Pick <strong>one</strong> output:</p>
 <ul>
-<li>HTML page with a table of contents</li>
+<li>HTML page with a table of contents
+<ul>
+<li>I recommend this</li>
+</ul></li>
 <li>Word report</li>
 <li>revealjs slide deck</li>
 <li>pdfs require LaTeX
@@ -1527,12 +1514,27 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </div><div class="column">
 <p>Choose a small, familiar topic. Aim for:</p>
 <ul>
-<li>A title</li>
-<li>Two or three sections</li>
-<li>One short <em>R</em> code block</li>
-<li>One rendered result</li>
+<li>A title and format (YAML header)</li>
+<li>Two or three sections (Markdown)</li>
+<li>One short <em>R</em> code block (code chunk)</li>
 </ul>
 </div></div>
+</section>
+<section id="in-rstudio" class="slide level2">
+<h2>In RStudio</h2>
+<ul>
+<li><code>File &gt; New Project</code></li>
+<li><code>File &gt; New File &gt; Quarto Document</code> (or <code>Quarto Presentation</code>)
+<ul>
+<li>This distinctions are just for initial convenience</li>
+<li>The <code>output:</code> line in the YAML header determines the document output</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="using-ms-copilot-to-get-started" class="title-slide slide level1 center">
+<h1>Using MS Copilot to get started</h1>
+
 </section>
 <section id="build-the-prompt-from-four-parts" class="slide level2">
 <h2>Build the prompt from four parts</h2>
@@ -1558,37 +1560,37 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </section>
 <section id="copilot-prompt-template" class="slide level2">
 <h2>Copilot prompt template</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a href></a>Create a minimal Quarto document for [AUDIENCE] about [TOPIC].</span>
-<span id="cb12-2"><a href></a>It will be edited and rendered in RStudio.</span>
-<span id="cb12-3"><a href></a></span>
-<span id="cb12-4"><a href></a>Output format: [html / docx / pdf / revealjs].</span>
-<span id="cb12-5"><a href></a>Include: [TITLE], [2–3 SECTIONS], and one short R code block that</span>
-<span id="cb12-6"><a href></a>uses [BUILT-IN DATA / CODE I PROVIDE].</span>
-<span id="cb12-7"><a href></a></span>
-<span id="cb12-8"><a href></a>Requirements:</span>
-<span id="cb12-9"><a href></a>- Return the complete contents of one .qmd file.</span>
-<span id="cb12-10"><a href></a>- Put the entire file in one fenced code block.</span>
-<span id="cb12-11"><a href></a>- Include a valid YAML header.</span>
-<span id="cb12-12"><a href></a>- Use simple Markdown.</span>
-<span id="cb12-13"><a href></a>- Use only packages and data named in this prompt.</span>
-<span id="cb12-14"><a href></a>- Do not invent results or references.</span>
-<span id="cb12-15"><a href></a>- Keep it short enough to inspect line by line.</span>
-<span id="cb12-16"><a href></a>- After the code block, give a three-item render checklist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb12-1"><a></a>Create a minimal Quarto document for [AUDIENCE] about [TOPIC].</span>
+<span id="cb12-2"><a></a>It will be edited and rendered in RStudio.</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a>Output format: [html / docx / pdf / revealjs].</span>
+<span id="cb12-5"><a></a>Include: [TITLE], [2–3 SECTIONS], and one short R code block that</span>
+<span id="cb12-6"><a></a>uses [BUILT-IN DATA / CODE I PROVIDE].</span>
+<span id="cb12-7"><a></a></span>
+<span id="cb12-8"><a></a>Requirements:</span>
+<span id="cb12-9"><a></a>- Return the complete contents of one .qmd file.</span>
+<span id="cb12-10"><a></a>- Put the entire file in one fenced code block.</span>
+<span id="cb12-11"><a></a>- Include a valid YAML header.</span>
+<span id="cb12-12"><a></a>- Use simple Markdown.</span>
+<span id="cb12-13"><a></a>- Use only packages and data named in this prompt.</span>
+<span id="cb12-14"><a></a>- Do not invent results or references.</span>
+<span id="cb12-15"><a></a>- Keep it short enough to inspect line by line.</span>
+<span id="cb12-16"><a></a>- After the code block, give a three-item render checklist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="example-student-prompt" class="slide level2">
 <h2>Example student prompt</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a href></a>Create a minimal Quarto HTML document for first-year psychology</span>
-<span id="cb13-2"><a href></a>students about the relationship between sleep and concentration.</span>
-<span id="cb13-3"><a href></a>It will be edited and rendered in RStudio.</span>
-<span id="cb13-4"><a href></a></span>
-<span id="cb13-5"><a href></a>Include a title, a short introduction, two sections, and one R code</span>
-<span id="cb13-6"><a href></a>block using only the built-in mtcars data to demonstrate a scatterplot.</span>
-<span id="cb13-7"><a href></a>Explain clearly that the dataset is only a coding demonstration and</span>
-<span id="cb13-8"><a href></a>is not evidence about sleep or concentration.</span>
-<span id="cb13-9"><a href></a></span>
-<span id="cb13-10"><a href></a>Return one complete .qmd file in one fenced code block. Include a valid</span>
-<span id="cb13-11"><a href></a>YAML header with a table of contents. Use simple Markdown. Do not invent</span>
-<span id="cb13-12"><a href></a>results, sources or packages. Finish with a three-item render checklist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb13-1"><a></a>Create a minimal Quarto HTML document for first-year psychology</span>
+<span id="cb13-2"><a></a>students about the relationship between sleep and concentration.</span>
+<span id="cb13-3"><a></a>It will be edited and rendered in RStudio.</span>
+<span id="cb13-4"><a></a></span>
+<span id="cb13-5"><a></a>Include a title, a short introduction, two sections, and one R code</span>
+<span id="cb13-6"><a></a>block using only the built-in mtcars data to demonstrate a scatterplot.</span>
+<span id="cb13-7"><a></a>Explain clearly that the dataset is only a coding demonstration and</span>
+<span id="cb13-8"><a></a>is not evidence about sleep or concentration.</span>
+<span id="cb13-9"><a></a></span>
+<span id="cb13-10"><a></a>Return one complete .qmd file in one fenced code block. Include a valid</span>
+<span id="cb13-11"><a></a>YAML header with a table of contents. Use simple Markdown. Do not invent</span>
+<span id="cb13-12"><a></a>results, sources or packages. Finish with a three-item render checklist.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="from-copilot-to-rstudio" class="slide level2">
 <h2>From Copilot to <em>RStudio</em></h2>
@@ -1596,7 +1598,9 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li>Inspect the response for invented claims or unnecessary packages</li>
 <li>Copy only the contents inside the code fence</li>
 <li>In <em>RStudio</em>, create <strong>File → New File → Quarto Document</strong></li>
-<li>Replace the starter text and save as <code>my-document.qmd</code></li>
+<li>Delete all the starter text and save as <code>my-document.qmd</code></li>
+<li>Paste the contents from <em>Copilot</em></li>
+<li>Save</li>
 <li>Select <strong>Render</strong></li>
 <li>Read the first error carefully, revise, and render again</li>
 </ol>
@@ -1604,16 +1608,16 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <section id="debugging-prompts" class="slide level2">
 <h2>Debugging prompts</h2>
 <p>If rendering fails, paste the <strong>exact error</strong> into Copilot:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a href></a>This Quarto document fails to render. Explain the first error in plain</span>
-<span id="cb14-2"><a href></a>English, then return the smallest corrected version. Do not add new</span>
-<span id="cb14-3"><a href></a>packages or features.</span>
-<span id="cb14-4"><a href></a></span>
-<span id="cb14-5"><a href></a>[PASTE ERROR]</span>
-<span id="cb14-6"><a href></a></span>
-<span id="cb14-7"><a href></a>[PASTE .QMD]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb14-1"><a></a>This Quarto document fails to render. Explain the first error in plain</span>
+<span id="cb14-2"><a></a>English, then return the smallest corrected version. Do not add new</span>
+<span id="cb14-3"><a></a>packages or features.</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a>[PASTE ERROR]</span>
+<span id="cb14-6"><a></a></span>
+<span id="cb14-7"><a></a>[PASTE .QMD]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If rendering works but looks poor:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a href></a>Keep the content and output format unchanged. Improve only the headings,</span>
-<span id="cb15-2"><a href></a>spacing and chunk options. Return the complete revised .qmd file.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode numberSource text number-lines code-with-copy"><code class="sourceCode"><span id="cb15-1"><a></a>Keep the content and output format unchanged. Improve only the headings,</span>
+<span id="cb15-2"><a></a>spacing and chunk options. Return the complete revised .qmd file.</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="before-you-finish" class="slide level2">
 <h2>Before you finish</h2>
@@ -1650,6 +1654,21 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li>Copilot can accelerate a minimal first draft</li>
 <li>Rendering and checking remain human tasks</li>
 </ul>
+</section>
+<section id="useful-links" class="slide level2">
+<h2>Useful links</h2>
+<ul>
+<li><a href="https://quarto.org/" target="_blank">Quarto</a></li>
+<li><a href="https://rmarkdown.rstudio.com/" target="_blank">R Markdown</a></li>
+</ul>
+<h3 id="linkedin-learning-where-you-can-earn-badges-to-put-on-your-cv">LinkedIn Learning (where you can earn badges to put on your CV)</h3>
+<ul>
+<li><a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcomplete-guide-to-r-wrangling-visualizing-and-modeling-data%3Ftrk%3Dshare_ent_url%26shareId%3DpHygdm9ASziZV%252FewsqPBWw%253D%253D" target="_blank">Complete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)</a></li>
+<li><a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-the-r-tidyverse-24332729%3Ftrk%3Dshare_ent_url%26shareId%3Dm0xWIVqXR8quPBvRAJbm%252BQ%253D%253D" target="_blank">Learning the R Tidyverse</a></li>
+<li><a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-markdown-formatting-text-without-the-complexity%3Ftrk%3Dshare_ent_url%26shareId%3DVBhsFETRQ8SBoZTINms4tg%253D%253D" target="_blank">Learning Markdown: Formatting Text without the Complexity</a></li>
+<li><a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fgit-essential-training-25677984%3Ftrk%3Dshare_ent_url%26shareId%3D%252Bd4xxHopRxGlDGHqJseccQ%253D%253D" target="_blank">Git Essential Training</a></li>
+</ul>
+
 
 </section></section>
 
