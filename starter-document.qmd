@@ -1,0 +1,29 @@
+---
+title: "My first Quarto document"
+author: "Your name"
+format:
+  html:
+    toc: true
+execute:
+  warning: false
+  message: false
+---
+
+# Introduction
+
+Write two or three sentences here.
+
+# A small example
+
+```{r}
+#| label: fig-example
+#| fig-cap: "A simple demonstration plot"
+
+plot(mtcars$wt, mtcars$mpg,
+     xlab = "Weight (1000 lbs)",
+     ylab = "Miles per gallon")
+```
+
+# Conclusion
+
+Write one sentence explaining what the document demonstrated.

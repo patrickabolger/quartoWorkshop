@@ -1,0 +1,17 @@
+{
+  "hash": "a5af3b84f06ebe991bd45b42f3cb200a",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"My first Quarto document\"\nauthor: \"Your name\"\nformat:\n  html:\n    toc: true\nexecute:\n  warning: false\n  message: false\n---\n\n# Introduction\n\nWrite two or three sentences here.\n\n# A small example\n\n\n::: {.cell}\n\n```{.r .cell-code}\nplot(mtcars$wt, mtcars$mpg,\n     xlab = \"Weight (1000 lbs)\",\n     ylab = \"Miles per gallon\")\n```\n\n::: {.cell-output-display}\n![A simple demonstration plot](starter-document_files/figure-html/fig-example-1.png){#fig-example width=672}\n:::\n:::\n\n\n# Conclusion\n\nWrite one sentence explaining what the document demonstrated.\n",
+    "supporting": [
+      "starter-document_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,30 @@
+.reveal { font-size: 34px; }
+.reveal h1, .reveal h2, .reveal h3 { letter-spacing: -0.02em; }
+.reveal h2 { color: #17365d; }
+.reveal pre code { max-height: 480px; font-size: 0.78em; line-height: 1.25; }
+.reveal .columns { align-items: flex-start; gap: 1.4rem; }
+.reveal .column { box-sizing: border-box; }
+.example-placeholder {
+  border: 3px dashed #7a8ca5;
+  border-radius: 14px;
+  padding: 1.3rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  background: #f4f7fa;
+  color: #334e68;
+}
+.qmd-label {
+  position: absolute;
+  right: 3%;
+  padding: .18rem .5rem;
+  border-radius: .3rem;
+  color: white;
+  font-size: .55em;
+  font-weight: 700;
+}
+.yaml-label { top: 29%; background: #8b5e3c; }
+.markdown-label { top: 53%; background: #287271; }
+.code-label { top: 75%; background: #6c5b7b; }
+.reveal blockquote { width: 85%; border-left: 6px solid #4c78a8; padding-left: 1rem; }
+.reveal .callout { font-size: .88em; }
+.reveal footer { font-size: .45em; }

@@ -1,0 +1,16 @@
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+
+# Credentials
+.Renviron
+*.pem
+*.key
+
+# Temporary files
+.DS_Store
+Thumbs.db
+.Rproj.user
+.httr-oauth
+.quarto

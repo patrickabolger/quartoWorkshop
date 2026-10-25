@@ -1,0 +1,575 @@
+---
+title: "From analysis to communication with Quarto"
+subtitle: "Professional documents from RStudio"
+author: "Patrick Bolger"
+format:
+  revealjs:
+    theme: default
+    css: styles.css
+    slide-number: c/t
+    progress: true
+    transition: fade
+    width: 1280
+    height: 720
+    margin: 0.08
+    code-copy: true
+    preview-links: auto
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+# Today's agenda
+
+## Two short halves
+
+:::: {.columns}
+::: {.column width="50%"}
+### First 30 minutes: Introduction
+
+- Communication tools
+- Markdown essentials
+- *Quarto* file structure
+
+:::
+
+::: {.column width="50%"}
+### Final 30 minutes: Practice
+
+- Choose a document
+- Prompt MS Copilot
+- Save as `.qmd`
+- Render, inspect, refine
+
+:::
+::::
+
+# Communication tools
+
+The Wider Picture
+
+## Visual editors
+
+:::: {.columns}
+::: {.column width="32%"}
+### Examples
+
+- *Word*
+- *PowerPoint*
+- *Google Docs*
+- *Canva*
+
+:::
+:::{.column width="32%"}
+### Downsides
+- proprietary
+- local formatting
+
+:::
+:::{.column width="33%"}
+### Upsides
+- WYSIWYG
+- easy to learn
+
+:::
+::::
+
+## Mark-up systems
+
+:::: {.columns}
+::: {.column width="32%"}
+### Examples
+
+- HTML
+- *LaTeX*
+
+:::
+:::{.column width="32%"}
+### Upsides
+
+- plain text
+- open-source
+- easy to share
+
+:::
+:::{.column width="33%"}
+### Downsides
+
+- "steep" learning curve^[Technically, a shallow learning curve]
+- rendering time
+
+:::
+::::
+
+## Markdown
+
+:::: {.columns}
+::: {.column width="40%"}
+
+### Origin (2004)
+
+- [John Gruber](https://en.wikipedia.org/wiki/John_Gruber){target="_blank"} & [Aaron Schwartz](https://en.wikipedia.org/wiki/Aaron_Swartz){target="_blank"}
+- felt raw html was too onerous to use
+- Hence, Mark***down***
+  - *up* = complex
+  - *down* = simple
+- converts to html
+
+:::
+:::{.column width="30%"}
+
+### Upsides
+
+- plain text
+- open-source
+- easy to share
+
+:::
+:::{.column width="30%"}
+### Downsides
+
+- easy learning curve
+- almost instant rendering
+
+:::
+::::
+
+## Scientific publishing systems
+
+Combine prose, code, and output specifications
+
+::::{.columns}
+:::{.column}
+### For today (part of *RStudio*)
+
+- *R Markdown*
+- *Quarto*
+
+:::
+:::{.column}
+### Others
+
+- *Jupyter Notebooks*
+- *Jupyter Books*
+- *MyST Markdown*
+
+:::
+::::
+
+## *R Markdown* and *Quarto*
+
+:::: {.columns}
+::: {.column width="48%"}
+### *R Markdown*
+
+- Introduced reproducible documents to many *R* users
+- Uses `.Rmd` source files
+- Tight integration with *R*
+- Still widely used
+
+:::
+
+::: {.column width="48%"}
+### *Quarto*
+
+- Newer, language-neutral publishing system
+- Uses `.qmd` source files
+- Works with *R*, *Python*, *Julia* and *Observable JS*
+  - hence *Quarto* (the four languages)
+- Documents, slides, websites, books, dashboards
+
+:::
+::::
+
+## A typical workflow for *Quarto* and *R Markdown*
+
+1. Create a *Quarto* or *R Markdown* file in *RStudio*
+2. Add
+   a. Required
+      1. YAML header
+   b. And one, or the other, or both
+      1. *Markdown*
+      2. code (or *Python*, etc.)
+3. Select **Render**
+4. The chosen output is rendered
+5. If neessary, edit the source, then render again
+
+# A quick intro to Markdown
+
+## Markdown: headings
+
+::: {.panel-tabset}
+### Rendered in a browser
+![](images/headersInMarkdown_rendered.png)
+
+### raw html
+![](images/headersInMarkdown_html.png)
+
+:::
+
+## Markdown: emphasis
+
+:::: {.columns}
+::: {.column width="48%"}
+### Raw Markdown
+
+```markdown
+*italics*
+
+**boldface**
+
+***bold italics***
+
+`inline code like sd(data$reactionTimes`
+```
+
+:::
+::: {.column width="48%"}
+### Rendered
+
+*italics*
+
+**boldface**
+
+***bold italics***
+
+`inline code`
+
+:::
+::::
+
+## Markdown: bullet points
+
+:::: {.columns}
+::: {.column width="48%"}
+### Raw Markdown
+
+```markdown
+- First point
+- Second point
+  - Nested point
+- Third point
+```
+
+:::
+::: {.column width="48%"}
+### Rendered
+
+- First point
+- Second point
+  - Nested point
+- Third point
+
+:::
+::::
+
+## Markdown: quotations
+
+:::: {.columns}
+::: {.column width="48%"}
+### Raw Markdown
+
+```markdown
+> Good communication makes
+> analysis useful.
+```
+:::
+
+::: {.column width="48%"}
+### Rendered
+
+> Good communication makes
+> analysis useful.
+
+:::
+::::
+
+## Markdown: formulas (with LaTeX)
+
+### LaTeX in Markdown
+
+```markdown
+This is the *F*-ratio: $F=\frac{MS_{between}}{MS_{within}}$
+
+And in a little more detail:
+$$
+F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
+$$
+```
+### Rendered
+
+This is the *F*-ratio: $F=\frac{MS_{between}}{MS_{within}}$
+
+And in a little more detail:
+$$
+F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
+$$
+
+# Quarto file structure
+
+## Anatomy of a `.qmd` file
+
+```markdown
+---
+title: "My report"
+format: html
+---
+
+(above is the YAML header)
+
+# Introduction
+
+This is the **Markdown area**.
+
+(below is a code chunk)
+
+`{r}
+summary(mtcars)
+`
+```
+
+## 1. YAML header 
+
+::::{.columns}
+:::{.column width="40%"}
+
+```yaml
+---
+title: "Student wellbeing summary"
+author: "Patrick Bolger"
+date: today
+format:
+  html:
+    toc: true
+---
+```
+
+:::
+
+:::{.column width="60%"}
+
+- Located at the very top of the file
+- Begins and ends with `---`
+- Stores document metadata and output settings
+- Indentation matters (as in Python)
+
+:::
+::::
+
+## 2. Markdown area
+
+```markdown
+# Introduction
+
+This report summarises a small survey.
+
+## Key findings
+
+- Most respondents reported...
+- The clearest pattern was...
+```
+
+- Prose and structure
+- Images, simple tables, links, and citations
+- Readable before rendering
+
+## 3. Code blocks
+
+```{r}
+#| eval: false
+#| echo: fenced
+#| label: fig-scatter
+#| fig-cap: "Miles per gallon by weight"
+
+plot(mtcars$wt, mtcars$mpg)
+```
+
+- Fenced by three backticks
+- `{r}` identifies the language^[This would be `{python}`, `{julia}`, and `{ojs}` for *python*, *julia*, and *Observable JS*, respectively]
+- `#|` lines are chunk options^[The `eval: false` in the chunk options (`#|`) at top tells *R* not to run the code. You wouldn't normally include this option in a finished product unless you were teaching.]
+- Output appears in the rendered document
+
+## One source, different outputs
+
+Change the YAML rather than rewriting the content
+
+:::: {.columns}
+::: {.column width="32%"}
+```yaml
+title: "How to use Quarto"
+author: "Patrick Bolger"
+date: today
+format: html
+```
+:::
+::: {.column width="32%"}
+```yaml
+title: "How to use Quarto"
+author: "Patrick Bolger"
+date: today
+format: 
+  docx: default
+  pdf: default
+```
+:::
+::: {.column width="32%"}
+
+```yaml
+title: "How to use Quarto"
+author: "Patrick Bolger"
+date: today
+format: 
+  revealjs: default
+  pptx: default
+```
+:::
+::::
+
+::: {.callout-warning}
+Not every design feature transfers perfectly between formats. Render early and inspect the result.
+:::
+
+::: {.callout-note}
+Rendering to `.pdf` requires that you have some version of *LaTeX* installed. the easiest way to do this is to install the R package *tinytex*, which installs a minimal version of *LaTeX*.
+:::
+
+# Practice
+
+## Your task: choose a minimal document
+
+::::{.columns}
+:::{.column}
+
+Pick **one** output:
+
+- HTML page with a table of contents
+  - I recommend this
+- Word report
+- revealjs slide deck
+- pdfs require LaTeX
+  - use the *tinytex* package in R
+  - but not today
+
+:::
+:::{.column}
+Choose a small, familiar topic. Aim for:
+
+- A title and format (YAML header)
+- Two or three sections (Markdown)
+- One short *R* code block (code chunk)
+
+:::
+::::
+
+## In RStudio
+
+- `File > New Project`
+- `File > New File > Quarto Document` (or `Quarto Presentation`)
+  - This distinctions are just for initial convenience
+  - The `output:` line in the YAML header determines the document output
+
+# Using MS Copilot to get started
+
+## Build the prompt from four parts
+
+1. **Goal**: what should Copilot create?
+2. **Context**: audience and purpose
+3. **Source**: content, data or code to use
+4. **Expectations**: exact format and constraints
+
+::: {.callout-tip}
+Ask for the complete `.qmd` source in **one fenced code block**, with no missing sections and no invented data.
+:::
+
+## Copilot prompt template
+
+```text
+Create a minimal Quarto document for [AUDIENCE] about [TOPIC].
+It will be edited and rendered in RStudio.
+
+Output format: [html / docx / pdf / revealjs].
+Include: [TITLE], [2–3 SECTIONS], and one short R code block that
+uses [BUILT-IN DATA / CODE I PROVIDE].
+
+Requirements:
+- Return the complete contents of one .qmd file.
+- Put the entire file in one fenced code block.
+- Include a valid YAML header.
+- Use simple Markdown.
+- Use only packages and data named in this prompt.
+- Do not invent results or references.
+- Keep it short enough to inspect line by line.
+- After the code block, give a three-item render checklist.
+```
+
+## Example student prompt
+
+```text
+Create a minimal Quarto HTML document for first-year psychology
+students about the relationship between sleep and concentration.
+It will be edited and rendered in RStudio.
+
+Include a title, a short introduction, two sections, and one R code
+block using only the built-in mtcars data to demonstrate a scatterplot.
+Explain clearly that the dataset is only a coding demonstration and
+is not evidence about sleep or concentration.
+
+Return one complete .qmd file in one fenced code block. Include a valid
+YAML header with a table of contents. Use simple Markdown. Do not invent
+results, sources or packages. Finish with a three-item render checklist.
+```
+
+## From Copilot to *RStudio*
+
+1. Inspect the response for invented claims or unnecessary packages
+2. Copy only the contents inside the code fence
+3. In *RStudio*, create **File → New File → Quarto Document**
+4. Replace the starter text and save as `my-document.qmd`
+5. Select **Render**
+6. Read the first error carefully, revise, and render again
+
+## Debugging prompts
+
+If rendering fails, paste the **exact error** into Copilot:
+
+```text
+This Quarto document fails to render. Explain the first error in plain
+English, then return the smallest corrected version. Do not add new
+packages or features.
+
+[PASTE ERROR]
+
+[PASTE .QMD]
+```
+
+If rendering works but looks poor:
+
+```text
+Keep the content and output format unchanged. Improve only the headings,
+spacing and chunk options. Return the complete revised .qmd file.
+```
+
+## Before you finish
+
+- [ ] Valid YAML header
+- [ ] Closing backticks present
+- [ ] Required packages installed
+- [ ] Data actually available
+- [ ] Output renders
+- [ ] Claims checked by you
+- [ ] File names sensible
+
+::: {.callout-important}
+Copilot can draft the source. You remain responsible for the content, code, evidence and final output.
+:::
+
+## Take-away
+
+### *Quarto* turns a readable source file into professional communication.
+
+- Markdown provides structure
+- YAML controls the output
+- Code blocks make results reproducible
+- Copilot can accelerate a minimal first draft
+- Rendering and checking remain human tasks
