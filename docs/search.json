@@ -18,14 +18,14 @@
     "href": "index.html#mark-up-systems",
     "title": "From analysis to communication with Quarto",
     "section": "Mark-up systems",
-    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\n“steep” learning curve1\nrendering time\n\n\nTechnically, a shallow learning curve"
+    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\nTypst\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\n“steep” learning curve1\nrendering time\n\n\nTechnically, a shallow learning curve"
   },
   {
     "objectID": "index.html#markdown",
     "href": "index.html#markdown",
     "title": "From analysis to communication with Quarto",
     "section": "Markdown",
-    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Schwartz\nfelt raw html was too onerous to use\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts to html\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\neasy learning curve\nalmost instant rendering"
+    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Schwartz\nfelt raw html was onerous\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts natively to html\n\nits raison d’être\n\n\n\nUpsides\n\nplain text\neasy to…\n\nread\nlearn\nshare\nrender\n\n\n\nDownsides\n\nBy itself: Few bells and whistles\n\nBut R Markdown and Quarto add many back in\n\nnot fully WYSYWYG, I guess\n\nbut 90% of the way there\na small price to pay, in my view"
   },
   {
     "objectID": "index.html#scientific-publishing-systems",
@@ -116,14 +116,14 @@
     "href": "index.html#one-source-different-outputs",
     "title": "From analysis to communication with Quarto",
     "section": "One source, different outputs",
-    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  pdf: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. the easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX."
+    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  pdf: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. the easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX.\n\n\n\n\n\nWhen you have multiple output formats, click Render at the top and choose the output from the drop-down menu"
   },
   {
     "objectID": "index.html#your-task-choose-a-minimal-document",
     "href": "index.html#your-task-choose-a-minimal-document",
     "title": "From analysis to communication with Quarto",
     "section": "Your task: choose a minimal document",
-    "text": "Your task: choose a minimal document\n\n\nPick one output:\n\nHTML page with a table of contents\n\nI recommend this\n\nWord report\nrevealjs slide deck\npdfs require LaTeX\n\nuse the tinytex package in R\nbut not today\n\n\n\nChoose a small, familiar topic. Aim for:\n\nA title and format (YAML header)\nTwo or three sections (Markdown)\nOne short R code block (code chunk)"
+    "text": "Your task: choose a minimal document\n\n\nPick one output:\n\nHTML page with a table of contents\n\nI recommend this\n\nWord report\nrevealjs slide deck\npdfs require LaTeX\n\neasiest to use the tinytex package in R\nbut not today, unless you already have LaTeX installed\n\n\n\nChoose a small, familiar topic. Aim for:\n\nA title and format (YAML header)\nTwo or three sections (Markdown)\nOne short R code block (code chunk)"
   },
   {
     "objectID": "index.html#in-rstudio",
@@ -186,6 +186,34 @@
     "href": "index.html#useful-links",
     "title": "From analysis to communication with Quarto",
     "section": "Useful links",
-    "text": "Useful links\n\nQuarto\nR Markdown\n\nLinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training"
+    "text": "Useful links\n\nQuarto\nR Markdown\ntinytex (to render to pdf)\n\nLinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training"
+  },
+  {
+    "objectID": "index.html#webpages-and-books",
+    "href": "index.html#webpages-and-books",
+    "title": "From analysis to communication with Quarto",
+    "section": "Webpages and books",
+    "text": "Webpages and books\n\n\nWebpages\n\nQuarto\nR Markdown\ntinytex (to render to pdf)\n\n\nBooks\n\nx"
+  },
+  {
+    "objectID": "index.html#linkedin-learning-where-you-can-earn-badges-to-put-on-your-cv",
+    "href": "index.html#linkedin-learning-where-you-can-earn-badges-to-put-on-your-cv",
+    "title": "From analysis to communication with Quarto",
+    "section": "LinkedIn Learning (where you can earn badges to put on your CV)",
+    "text": "LinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training"
+  },
+  {
+    "objectID": "index.html#part-1",
+    "href": "index.html#part-1",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 1",
+    "text": "Part 1\nPick one output type:\n\n\neasier documents\n\nwebpage with a table of contents\n\nI recommend this\n\nWord documnet\nrevealjs slide deck\n\n\npdfs\n\nthis traditionally requires LaTeX\neasiest to use the tinytex package in R\n\nbut not today, unless you already have LaTeX installed\n\nBut Quarto can use Typst now\n\nTypst comes with Quarto\npdfs without a LaTeX installation\nNew and under development"
+  },
+  {
+    "objectID": "index.html#part-2-choose-a-small-familiar-topic.",
+    "href": "index.html#part-2-choose-a-small-familiar-topic.",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 2: Choose a small, familiar topic.",
+    "text": "Part 2: Choose a small, familiar topic.\nAim for:\n\nA title and format (YAML header)\nTwo or three sections (Markdown)\nOne short R code block (code chunk)"
   }
 ]

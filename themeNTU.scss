@@ -1,0 +1,126 @@
+/*-- scss:defaults --*/
+
+/* NTU colour palette */
+$ntu-pink: #e6005b;
+$claret: #9e043d;
+$pewter: #585858;
+$pewter-lightest: #f2f2f2;
+$prussian: #005b94;
+$black: #000000;
+
+/* RevealJS colours */
+$backgroundColor: $pewter-lightest;
+$mainColor: $black;
+$headingColor: $ntu-pink;
+
+$linkColor: $prussian;
+$linkColorHover: $prussian;
+
+/* Bootstrap colours used by Quarto */
+$body-bg: $pewter-lightest;
+$body-color: $black;
+$link-color: $prussian;
+
+/* Typography */
+$font-family-sans-serif: Arial, Helvetica, sans-serif;
+$presentation-font-size-root: 32px;
+
+
+/*-- scss:rules --*/
+
+/* Overall presentation styling */
+.reveal {
+  color: $black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Default slide background */
+.reveal .slides section {
+  background-color: $pewter-lightest;
+}
+
+/*
+Slide titles created with a single hashtag:
+
+# Slide title
+*/
+.reveal .slides section > h1:first-child {
+  color: $ntu-pink !important;
+  font-weight: 700;
+}
+
+/*
+All level-2 headings are Claret by default.
+
+This includes headings above columns and other headings
+placed within a slide.
+*/
+.reveal .slides section h2 {
+  color: $claret !important;
+  font-weight: 700;
+}
+
+/*
+When a level-2 heading is the first heading on a slide,
+RevealJS treats it as the slide title:
+
+## Slide title
+
+This rule changes that title to NTU Pink.
+*/
+.reveal .slides section > h2:first-child {
+  color: $ntu-pink !important;
+}
+
+/* Lower-level headings */
+.reveal .slides section h3,
+.reveal .slides section h4,
+.reveal .slides section h5,
+.reveal .slides section h6 {
+  color: $claret;
+  font-weight: 700;
+}
+
+/* Body text */
+.reveal p,
+.reveal li,
+.reveal dt,
+.reveal dd,
+.reveal td,
+.reveal th,
+.reveal figcaption,
+.reveal blockquote {
+  color: $black;
+}
+
+/* Prussian blue links */
+.reveal a,
+.reveal a:link,
+.reveal a:visited {
+  color: $prussian !important;
+}
+
+/* Link hover and keyboard-focus styling */
+.reveal a:hover,
+.reveal a:focus {
+  color: $prussian !important;
+  text-decoration: underline;
+}
+
+/* Inline code */
+.reveal code {
+  color: $claret;
+}
+
+/* Code contained within code blocks */
+.reveal pre code {
+  color: $black;
+}
+
+/* Ensure emphasised text inherits the surrounding text colour */
+.reveal strong,
+.reveal b,
+.reveal em,
+.reveal i {
+  color: inherit;
+}

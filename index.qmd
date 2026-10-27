@@ -4,16 +4,22 @@ subtitle: "Professional documents from RStudio"
 author: "Patrick Bolger"
 format:
   revealjs:
-    theme: default
+    theme: themeNTU.scss
     css: styles.css
     slide-number: c/t
     progress: true
-    transition: fade
+    transition: slide
+    background-transition: fade
     width: 1280
     height: 720
     margin: 0.08
     code-copy: true
     preview-links: auto
+    logo:
+      path: images/NTU_Primary_logo_CMYK.png
+      alt: "NTU logo"
+    navigation-mode: vertical
+    
 execute:
   echo: true
   warning: false
@@ -83,6 +89,7 @@ The Wider Picture
 
 - HTML
 - *LaTeX*
+- *Typst*
 
 :::
 :::{.column width="32%"}
@@ -110,27 +117,34 @@ The Wider Picture
 ### Origin (2004)
 
 - [John Gruber](https://en.wikipedia.org/wiki/John_Gruber){target="_blank"} & [Aaron Schwartz](https://en.wikipedia.org/wiki/Aaron_Swartz){target="_blank"}
-- felt raw html was too onerous to use
+- felt raw html was onerous
 - Hence, Mark***down***
   - *up* = complex
   - *down* = simple
-- converts to html
+- converts natively to html
+  - its raison d'être
 
 :::
-:::{.column width="30%"}
+:::{.column width="15%"}
 
 ### Upsides
 
 - plain text
-- open-source
-- easy to share
+- easy to...
+  - read
+  - learn
+  - share
+  - render
 
 :::
-:::{.column width="30%"}
+:::{.column width="45%"}
 ### Downsides
 
-- easy learning curve
-- almost instant rendering
+- By itself: Few bells and whistles
+  - But *R Markdown* and *Quarto* add many back in
+- not fully WYSYWYG, I guess
+  - but 90% of the way there
+  - a small price to pay, in my view
 
 :::
 ::::
@@ -329,7 +343,7 @@ summary(mtcars)
 `
 ```
 
-## 1. YAML header 
+## 1. YAML header
 
 ::::{.columns}
 :::{.column width="40%"}
@@ -434,33 +448,48 @@ Not every design feature transfers perfectly between formats. Render early and i
 Rendering to `.pdf` requires that you have some version of *LaTeX* installed. the easiest way to do this is to install the R package *tinytex*, which installs a minimal version of *LaTeX*.
 :::
 
+::: aside
+When you have multiple output formats, click `Render` at the top and choose the output from the drop-down menu
+:::
+
 # Practice
 
-## Your task: choose a minimal document
+## Part 1
+
+Pick **one** output type:
 
 ::::{.columns}
 :::{.column}
 
-Pick **one** output:
+### easier documents
 
-- HTML page with a table of contents
+- ***webpage*** with a table of contents
   - I recommend this
-- Word report
-- revealjs slide deck
-- pdfs require LaTeX
-  - use the *tinytex* package in R
-  - but not today
+- ***Word*** documnet
+- ***revealjs*** slide deck
 
 :::
 :::{.column}
-Choose a small, familiar topic. Aim for:
+
+### pdfs
+- this traditionally requires *LaTeX*
+- easiest to use the *tinytex* package in *R*
+  - but not today, unless you already have LaTeX installed
+- But *Quarto* can use *Typst* now
+  - *Typst* comes with *Quarto*
+  - pdfs without a *LaTeX* installation
+  - New and under development
+
+:::
+::::
+
+## Part 2: Choose a small, familiar topic. 
+
+Aim for:
 
 - A title and format (YAML header)
 - Two or three sections (Markdown)
 - One short *R* code block (code chunk)
-
-:::
-::::
 
 ## In RStudio
 
@@ -576,12 +605,30 @@ Copilot can draft the source. You remain responsible for the content, code, evid
 - Copilot can accelerate a minimal first draft
 - Rendering and checking remain human tasks
 
-## Useful links
+# Links
+
+## Webpages and books
+
+::::{.columns}
+:::{.column}
+
+### Webpages
 
 - [Quarto](https://quarto.org/){target="_blank"}
 - [R Markdown](https://rmarkdown.rstudio.com/){target="_blank"}
+- [tinytex (to render to pdf)](https://yihui.org/tinytex/){target="_blank"}
 
-### LinkedIn Learning (where you can earn badges to put on your CV)
+:::
+:::{.column}
+
+### Books
+
+- x
+
+:::
+::::
+
+## LinkedIn Learning (where you can earn badges to put on your CV)
 
 - [Complete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcomplete-guide-to-r-wrangling-visualizing-and-modeling-data%3Ftrk%3Dshare_ent_url%26shareId%3DpHygdm9ASziZV%252FewsqPBWw%253D%253D){target="_blank"}
 - [Learning the R Tidyverse](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-the-r-tidyverse-24332729%3Ftrk%3Dshare_ent_url%26shareId%3Dm0xWIVqXR8quPBvRAJbm%252BQ%253D%253D){target="_blank"}
