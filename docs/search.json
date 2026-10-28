@@ -39,14 +39,14 @@
     "href": "index.html#r-markdown-and-quarto",
     "title": "From analysis to communication with Quarto",
     "section": "R Markdown and Quarto",
-    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nInseparable integration with R\n\n(you can’t render without R installed)\n\nStill widely used\n\n\nQuarto\n\nNewer, more language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nDocuments, slides, websites, books, dashboards\nStandalone (no a prior requirement to install R)"
+    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nInseparable integration with R\n\n(you can’t render without R installed)\n\nStill widely used\n\n\nQuarto\n\nNewer, more language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nDocuments, slides, websites, books, dashboards\nStandalone (no a priori requirement to install R)"
   },
   {
     "objectID": "index.html#a-typical-workflow-for-quarto-and-r-markdown",
     "href": "index.html#a-typical-workflow-for-quarto-and-r-markdown",
     "title": "From analysis to communication with Quarto",
     "section": "A typical workflow for Quarto and R Markdown",
-    "text": "A typical workflow for Quarto and R Markdown\n\nCreate a Quarto or R Markdown file in RStudio\nAdd\n\nRequired\n\nYAML header\n\nAnd one, or the other, or both\n\nMarkdown\ncode (or Python, etc.)\n\n\nSelect Render\nThe chosen output is rendered\nIf neessary, edit the source, then render again"
+    "text": "A typical workflow for Quarto and R Markdown\n\nCreate a Quarto or R Markdown file in RStudio\nAdd\n\nRequired\n\nYAML header\n\nAnd one, or the other, or both\n\nMarkdown\ncode (or Python, etc.)\n\n\nSelect Render\nThe chosen output is rendered\nIf necessary, edit the source, then render again"
   },
   {
     "objectID": "index.html#markdown-headings",
@@ -88,7 +88,7 @@
     "href": "index.html#anatomy-of-a-.qmd-file",
     "title": "From analysis to communication with Quarto",
     "section": "Anatomy of a .qmd file",
-    "text": "Anatomy of a .qmd file\n---\ntitle: \"My report\"\nformat: html\n---\n\n(above is the YAML header)\n\n# Introduction\n\nThis is the **Markdown area**.\n\n(below is a code chunk)\n\n`{r}\nsummary(mtcars)\n`"
+    "text": "Anatomy of a .qmd file\n---\ntitle: \"My report\"\nformat: html\n---\n\n&lt;!-- above is the YAML header --&gt;\n\n# Introduction\n\nThis is the **Markdown area**.\n\n&lt;!-- below is a code chunk --&gt;\n\n``{r}\nsummary(mtcars)\n``\n\n\n\n\n\n\nNote\n\n\nThe code chunk should actually have 3 backticks, closed by 3 backticks as well. If I put 3 in for this demo, weird things happen. Also note that &lt;!-- these are unintepreted comments in markdown --&gt;"
   },
   {
     "objectID": "index.html#yaml-header",
@@ -116,7 +116,7 @@
     "href": "index.html#one-source-different-outputs",
     "title": "From analysis to communication with Quarto",
     "section": "One source, different outputs",
-    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  pdf: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. the easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX.\n\n\n\n\n\nWhen you have multiple output formats, click Render at the top and choose the output from the drop-down menu"
+    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  typst: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. the easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX.\n\n\n\n\n\nWhen you have multiple output formats, click Render at the top and choose the output from the drop-down menu"
   },
   {
     "objectID": "index.html#your-task-choose-a-minimal-document",
@@ -144,21 +144,21 @@
     "href": "index.html#copilot-prompt-template",
     "title": "From analysis to communication with Quarto",
     "section": "Copilot prompt template",
-    "text": "Copilot prompt template\nCreate a minimal Quarto document for [AUDIENCE] about [TOPIC].\nIt will be edited and rendered in RStudio.\n\nOutput format: [html / docx / pdf / revealjs].\nInclude: [TITLE], [2–3 SECTIONS], and one short R code block that\nuses [BUILT-IN DATA / CODE I PROVIDE].\n\nRequirements:\n- Return the complete contents of one .qmd file.\n- Put the entire file in one fenced code block.\n- Include a valid YAML header.\n- Use simple Markdown.\n- Use only packages and data named in this prompt.\n- Do not invent results or references.\n- Keep it short enough to inspect line by line.\n- After the code block, give a three-item render checklist."
+    "text": "Copilot prompt template\n\nCreate a minimal Quarto document for [AUDIENCE] about [TOPIC]. It will be edited and rendered in RStudio.\nOutput format: [html / docx / pdf / revealjs]. Include: [TITLE], [2–3 SECTIONS], and one short R code block that uses [BUILT-IN DATA / CODE I PROVIDE].\nRequirements:\n\nReturn the complete contents of one .qmd file.\nPut the entire file in one fenced code block.\nInclude a valid YAML header.\nUse simple Markdown.\nUse only packages and data named in this prompt.\nDo not invent results or references.\nKeep it short enough to inspect line by line.\nAfter the code block, give a three-item render checklist."
   },
   {
     "objectID": "index.html#example-student-prompt",
     "href": "index.html#example-student-prompt",
     "title": "From analysis to communication with Quarto",
     "section": "Example student prompt",
-    "text": "Example student prompt\nCreate a minimal Quarto HTML document for first-year psychology\nstudents about the relationship between sleep and concentration.\nIt will be edited and rendered in RStudio.\n\nInclude a title, a short introduction, two sections, and one R code\nblock using only the built-in mtcars data to demonstrate a scatterplot.\nExplain clearly that the dataset is only a coding demonstration and\nis not evidence about sleep or concentration.\n\nReturn one complete .qmd file in one fenced code block. Include a valid\nYAML header with a table of contents. Use simple Markdown. Do not invent\nresults, sources or packages. Finish with a three-item render checklist."
+    "text": "Example student prompt\n\nCreate a minimal Quarto HTML document for first-year psychology students about the relationship between sleep and concentration. It will be edited and rendered in RStudio.\nInclude a title, a short introduction, two sections, and one R code block using only the built-in mtcars data to demonstrate a scatterplot. Explain clearly that the dataset is only a coding demonstration and is not evidence about sleep or concentration.\nReturn one complete .qmd file in one fenced code block. Include a valid YAML header with a table of contents. Use simple Markdown. Do not invent results, sources or packages. Finish with a three-item render checklist."
   },
   {
     "objectID": "index.html#from-copilot-to-rstudio",
     "href": "index.html#from-copilot-to-rstudio",
     "title": "From analysis to communication with Quarto",
     "section": "From Copilot to RStudio",
-    "text": "From Copilot to RStudio\n\nInspect the response for invented claims or unnecessary packages\nCopy only the contents inside the code fence\nIn RStudio, create File → New File → Quarto Document\nDelete all the starter text and save as my-document.qmd\nPaste the contents from Copilot\nSave\nSelect Render\nRead the first error carefully, revise, and render again"
+    "text": "From Copilot to RStudio\n\nInspect the response for invented claims or unnecessary packages\nCopy only the contents inside the code fence\nIn your default .qmd, delete all the starter text and save, typing in a reasonable file name\nPaste the contents from the code fence in Copilot\nSave again\nSelect Render\nIf there are errors, read them carefully, revise, and render again"
   },
   {
     "objectID": "index.html#debugging-prompts",
@@ -193,21 +193,21 @@
     "href": "index.html#webpages-and-books",
     "title": "From analysis to communication with Quarto",
     "section": "Webpages and books",
-    "text": "Webpages and books\n\n\nWebpages\n\nQuarto\nR Markdown\ntinytex (to render to pdf)\n\n\nBooks\n\nx"
+    "text": "Webpages and books\n\n\nWebpages\n\nR Markdown\nQuarto\ntinytex (to render to pdf)\nTypst\n\n\nIDEs (Integrated Development Environment)\n\nRStudio\nPositron\n\nThe company Posit is slowly moving away from RStudio and towards Positron, just as it’s moving away from R Markdown and towards Quarto"
   },
   {
     "objectID": "index.html#linkedin-learning-where-you-can-earn-badges-to-put-on-your-cv",
     "href": "index.html#linkedin-learning-where-you-can-earn-badges-to-put-on-your-cv",
     "title": "From analysis to communication with Quarto",
     "section": "LinkedIn Learning (where you can earn badges to put on your CV)",
-    "text": "LinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training"
+    "text": "LinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training\n\n(for collaboration; git is like dropbox, but with each step of the process )\n\n\n\nNothing on R in Quarto yet; just a course on using Python in quarto"
   },
   {
     "objectID": "index.html#part-1",
     "href": "index.html#part-1",
     "title": "From analysis to communication with Quarto",
     "section": "Part 1",
-    "text": "Part 1\nPick one output type:\n\n\neasier documents\n\nwebpage with a table of contents\n\nI recommend this\n\nWord documnet\nrevealjs slide deck\n\n\npdfs\n\nthis traditionally requires LaTeX\neasiest to use the tinytex package in R\n\nbut not today, unless you already have LaTeX installed\n\nBut Quarto can use Typst now\n\nTypst comes with Quarto\npdfs without a LaTeX installation\nNew and under development"
+    "text": "Part 1\nPick one output type:\n\n\nnon-pdfs\n\noutput: html\n\nwebpage\n\noutput: revealjs\n\nhtml slide deck\n\noutput: docx\n\nMS Word\n\noutput: pptx\n\nMS PowerPoint\n\n\n\noutput: pdf (more difficult)\n\nthis traditionally required installing LaTeX\neasiest to use the tinytex package in R\nbut not today, unless you already have LaTeX installed\n\noutput: typst (easier)\n\nQuarto can use Typst now\nTypst comes built in to Quarto\nNew and under development"
   },
   {
     "objectID": "index.html#part-2-choose-a-small-familiar-topic.",
@@ -215,5 +215,96 @@
     "title": "From analysis to communication with Quarto",
     "section": "Part 2: Choose a small, familiar topic.",
     "text": "Part 2: Choose a small, familiar topic.\nAim for:\n\nA title and format (YAML header)\nTwo or three sections (Markdown)\nOne short R code block (code chunk)"
+  },
+  {
+    "objectID": "index.html#markdown-links",
+    "href": "index.html#markdown-links",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: links",
+    "text": "Markdown: links\n\n\nRaw Markdown\n[my pres](https://patrickabolger.github.io/quartoWorkshop/){target=\"_blank\"}\n\nRendered\nmy pres\n\n\n\n\n\n\n\nNote\n\n\n{target=\"_blank\"} is actually specific to Quarto Markdown, and opens links in new tabs instead of the same tab"
+  },
+  {
+    "objectID": "index.html#books",
+    "href": "index.html#books",
+    "title": "From analysis to communication with Quarto",
+    "section": "Books",
+    "text": "Books"
+  },
+  {
+    "objectID": "index.html#debugging-prompts-1",
+    "href": "index.html#debugging-prompts-1",
+    "title": "From analysis to communication with Quarto",
+    "section": "Debugging prompts (1)",
+    "text": "Debugging prompts (1)\nIf rendering fails, paste the exact error into Copilot:\n\nThis Quarto document fails to render. Explain the error in plain English, then return the smallest corrected version. Do not add new packages or features.\n[PASTE ERROR]\n[UPLOAD .QMD]"
+  },
+  {
+    "objectID": "index.html#debugging-prompts-2",
+    "href": "index.html#debugging-prompts-2",
+    "title": "From analysis to communication with Quarto",
+    "section": "Debugging prompts (2)",
+    "text": "Debugging prompts (2)\nIf rendering works but looks poor:\n\nKeep the content and output format unchanged. Improve only the headings, spacing and chunk options. Return the complete revised .qmd file."
+  },
+  {
+    "objectID": "index.html#before-you-finish-check-for-the-following",
+    "href": "index.html#before-you-finish-check-for-the-following",
+    "title": "From analysis to communication with Quarto",
+    "section": "Before you finish, check for the following",
+    "text": "Before you finish, check for the following\n\nValid YAML header\nClosing backticks present\nRequired packages installed\nData actually available\nOutput renders\nClaims checked by you\nFile names sensible\n\n\n\n\n\n\n\nImportant\n\n\nCopilot can draft the source. But naturally, you are responsible for the content, code, evidence and final output."
+  },
+  {
+    "objectID": "index.html#quarto-turns-a-readable-source-file-into-professional-communication.",
+    "href": "index.html#quarto-turns-a-readable-source-file-into-professional-communication.",
+    "title": "From analysis to communication with Quarto",
+    "section": "Quarto turns a readable source file into professional communication.",
+    "text": "Quarto turns a readable source file into professional communication.\n\nMarkdown provides structure\nYAML controls the output\nCode blocks make results reproducible\nCopilot can accelerate a minimal first draft\nRendering and checking remain human tasks"
+  },
+  {
+    "objectID": "index.html#part-1-pick-1-or-2-output-types",
+    "href": "index.html#part-1-pick-1-or-2-output-types",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 1: Pick 1 or 2 output types",
+    "text": "Part 1: Pick 1 or 2 output types\n\n\nnon-pdfs\n\noutput: html\n\nwebpage\n\noutput: revealjs\n\nhtml slide deck\n\noutput: docx\n\nMS Word\n\noutput: pptx\n\nMS PowerPoint\n\n\n\noutput: pdf (more difficult pdfs)\n\nthis traditionally required installing LaTeX\neasiest to use the tinytex package in R\nbut not today, unless you already have LaTeX installed\n\noutput: typst (easier pdfs)\n\nQuarto can use Typst now\nTypst comes built in to Quarto\nNew and under development\n\n\n\n\n\n\n\n\nWarning\n\n\nIf you choose 2 output types, make them the same type of document (e.g., docx and typst, or revealjs and pptx). This minimises incompatibility issues."
+  },
+  {
+    "objectID": "index.html#part-3-create-a-project-in-rstudio",
+    "href": "index.html#part-3-create-a-project-in-rstudio",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 3: Create a project in RStudio",
+    "text": "Part 3: Create a project in RStudio\n\nFile &gt; New Project\nFile &gt; New File &gt; Quarto Document (or Quarto Presentation)\n\nThis distinctions are just for initial convenience\nThe output: line in the YAML header determines the document output"
+  },
+  {
+    "objectID": "index.html#part-4-use-ms-copilot-to-get-started",
+    "href": "index.html#part-4-use-ms-copilot-to-get-started",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 4: Use MS Copilot to get started",
+    "text": "Part 4: Use MS Copilot to get started"
+  },
+  {
+    "objectID": "index.html#part-4-build-the-prompt-from-four-parts",
+    "href": "index.html#part-4-build-the-prompt-from-four-parts",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 4: Build the prompt from four parts",
+    "text": "Part 4: Build the prompt from four parts\n\nGoal: what should Copilot create?\nContext: audience and purpose\nSource: content, data or code to use\nExpectations: exact format and constraints\n\n\n\n\n\n\n\nTip\n\n\nAsk for the complete .qmd source in one fenced code block, with no missing sections and no invented data."
+  },
+  {
+    "objectID": "index.html#part-5-from-copilot-to-quarto",
+    "href": "index.html#part-5-from-copilot-to-quarto",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 5: From Copilot to Quarto",
+    "text": "Part 5: From Copilot to Quarto\n\nInspect the response for invented claims or unnecessary packages\nCopy only the contents inside the code fence\nIn your default .qmd, delete all the starter text and save, typing in a reasonable file name\nPaste the contents from the code fence in Copilot\nSave again\nSelect Render\nIf there are errors, read them carefully, revise, and render again"
+  },
+  {
+    "objectID": "index.html#part-6a-debugging-prompts",
+    "href": "index.html#part-6a-debugging-prompts",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 6a: Debugging prompts",
+    "text": "Part 6a: Debugging prompts\nIf rendering fails, paste the exact error into Copilot:\n\nThis Quarto document fails to render. Explain the error in plain English, then return the smallest corrected version. Do not add new packages or features.\n[PASTE ERROR]\n[UPLOAD .QMD]"
+  },
+  {
+    "objectID": "index.html#part-6b-debugging-prompts",
+    "href": "index.html#part-6b-debugging-prompts",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 6b: Debugging prompts",
+    "text": "Part 6b: Debugging prompts\nIf rendering works but looks poor:\n\nKeep the content and output format unchanged. Improve only the headings, spacing and chunk options. Return the complete revised .qmd file."
   }
 ]

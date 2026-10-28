@@ -209,7 +209,7 @@ Combine prose, code, and output specifications
       2. code (or *Python*, etc.)
 3. Select **Render**
 4. The chosen output is rendered
-5. If neessary, edit the source, then render again
+5. If necessary, edit the source, then render again
 
 # A quick intro to Markdown
 
@@ -301,6 +301,29 @@ Combine prose, code, and output specifications
 :::
 ::::
 
+## Markdown: links
+
+:::: {.columns}
+::: {.column width="75%"}
+### Raw Markdown
+
+```markdown
+[my pres](https://patrickabolger.github.io/quartoWorkshop/){target="_blank"}
+```
+:::
+
+::: {.column width="24%"}
+### Rendered
+
+[my pres](https://patrickabolger.github.io/quartoWorkshop/){target="_blank"}
+
+:::
+::::
+
+::: {.callout-note}
+`{target="_blank"}` is actually specific to *Quarto Markdown*, and opens links in new tabs instead of the same tab
+:::
+
 ## Markdown: formulas (with LaTeX)
 
 ### LaTeX in Markdown
@@ -332,18 +355,25 @@ title: "My report"
 format: html
 ---
 
-(above is the YAML header)
+<!-- above is the YAML header -->
 
 # Introduction
 
 This is the **Markdown area**.
 
-(below is a code chunk)
+<!-- below is a code chunk -->
 
-`{r}
+``{r}
 summary(mtcars)
-`
+``
 ```
+
+::: {.callout-note}
+The code chunk should actually have 3 backticks, closed by 3 backticks as well. If I put 3 in for this demo, weird things happen. Also note that `<!-- these are unintepreted comments in markdown -->`
+:::
+
+
+
 
 ## 1. YAML header
 
@@ -426,7 +456,7 @@ author: "Patrick Bolger"
 date: today
 format: 
   docx: default
-  pdf: default
+  typst: default
 ```
 :::
 ::: {.column width="32%"}
@@ -456,34 +486,41 @@ When you have multiple output formats, click `Render` at the top and choose the 
 
 # Practice
 
-## Part 1
-
-Pick **one** output type:
+## Part 1: Pick 1 or 2 output types {.smaller}
 
 ::::{.columns}
-:::{.column}
+:::{.column width="27%"}
 
-### easier documents
+### non-pdfs
 
-- ***webpage*** with a table of contents
-  - I recommend this
-- ***Word*** documnet
-- ***revealjs*** slide deck
+- `output: html`
+  - webpage
+- `output: revealjs`
+  - html slide deck
+- `output: docx`
+  - MS *Word*
+- `output: pptx`
+  - MS *PowerPoint*
 
 :::
-:::{.column}
+:::{.column width="72%"}
 
-### pdfs
-- this traditionally requires *LaTeX*
+### `output: pdf` (more difficult pdfs)
+- this traditionally required installing *LaTeX*
 - easiest to use the *tinytex* package in *R*
-  - but not today, unless you already have LaTeX installed
-- But *Quarto* can use *Typst* now
-  - *Typst* comes with *Quarto*
-  - pdfs without a *LaTeX* installation
-  - New and under development
+- but not today, unless you already have *LaTeX* installed
+
+### `output: typst` (easier pdfs)
+- *Quarto* can use *Typst* now
+- *Typst* comes built in to *Quarto*
+- New and under development
 
 :::
 ::::
+
+::: {.callout-warning}
+If you choose 2 output types, make them the same type of document (e.g., `docx` and `typst`, or `revealjs` and `pptx`). This minimises incompatibility issues.
+:::
 
 ## Part 2: Choose a small, familiar topic. 
 
@@ -493,16 +530,16 @@ Aim for:
 - Two or three sections (Markdown)
 - One short *R* code block (code chunk)
 
-## In RStudio
+## Part 3: Create a project in *RStudio*
 
 - `File > New Project`
 - `File > New File > Quarto Document` (or `Quarto Presentation`)
   - This distinctions are just for initial convenience
   - The `output:` line in the YAML header determines the document output
 
-# Using MS Copilot to get started
+# Use *MS Copilot* to get started
 
-## Build the prompt from four parts
+## Part 4: Build the prompt from four parts
 
 1. **Goal**: what should Copilot create?
 2. **Context**: audience and purpose
@@ -513,77 +550,67 @@ Aim for:
 Ask for the complete `.qmd` source in **one fenced code block**, with no missing sections and no invented data.
 :::
 
-## Copilot prompt template
+## Copilot prompt template {.smaller}
 
-```text
-Create a minimal Quarto document for [AUDIENCE] about [TOPIC].
+>Create a minimal Quarto document for [AUDIENCE] about [TOPIC].
 It will be edited and rendered in RStudio.
-
-Output format: [html / docx / pdf / revealjs].
+>
+>Output format: [html / docx / pdf / revealjs].
 Include: [TITLE], [2–3 SECTIONS], and one short R code block that
 uses [BUILT-IN DATA / CODE I PROVIDE].
-
-Requirements:
-- Return the complete contents of one .qmd file.
-- Put the entire file in one fenced code block.
-- Include a valid YAML header.
-- Use simple Markdown.
-- Use only packages and data named in this prompt.
-- Do not invent results or references.
-- Keep it short enough to inspect line by line.
-- After the code block, give a three-item render checklist.
-```
+>
+>Requirements:
+>
+> - Return the complete contents of one .qmd file.
+> - Put the entire file in one fenced code block.
+> - Include a valid YAML header.
+> - Use simple Markdown.
+> - Use only packages and data named in this prompt.
+> - Do not invent results or references.
+> - Keep it short enough to inspect line by line.
+> - After the code block, give a three-item render checklist.
 
 ## Example student prompt
 
-```text
-Create a minimal Quarto HTML document for first-year psychology
-students about the relationship between sleep and concentration.
+>Create a minimal Quarto HTML document for first-year psychology students about the relationship between sleep and concentration.
 It will be edited and rendered in RStudio.
-
-Include a title, a short introduction, two sections, and one R code
-block using only the built-in mtcars data to demonstrate a scatterplot.
+>
+>Include a title, a short introduction, two sections, and one *R* code
+block using only the built-in *mtcars* data to demonstrate a scatterplot.
 Explain clearly that the dataset is only a coding demonstration and
 is not evidence about sleep or concentration.
-
-Return one complete .qmd file in one fenced code block. Include a valid
-YAML header with a table of contents. Use simple Markdown. Do not invent
+>
+>Return one complete `.qmd` file in one fenced code block. Include a valid YAML header with a table of contents. Use simple Markdown. Do not invent
 results, sources or packages. Finish with a three-item render checklist.
-```
 
-## From Copilot to *RStudio*
+## Part 5: From *Copilot* to *Quarto*
 
 1. Inspect the response for invented claims or unnecessary packages
 2. Copy only the contents inside the code fence
-3. In *RStudio*, create **File → New File → Quarto Document**
-4. Delete all the starter text and save as `my-document.qmd`
-5. Paste the contents from *Copilot*
-6. Save
-7. Select **Render**
-8. Read the first error carefully, revise, and render again
+3. In your default `.qmd`, delete all the starter text and save, typing in a reasonable file name
+4. Paste the contents from the code fence in *Copilot*
+5. Save again
+6. Select **Render**
+7. If there are errors, read them carefully, revise, and render again
 
-## Debugging prompts
+## Part 6a: Debugging prompts
 
 If rendering fails, paste the **exact error** into Copilot:
 
-```text
-This Quarto document fails to render. Explain the first error in plain
-English, then return the smallest corrected version. Do not add new
-packages or features.
+>This Quarto document fails to render. Explain the error in plain English, then return the smallest corrected version. Do not add new packages or features.
+>
+>[PASTE ERROR]
+>
+>[UPLOAD `.QMD`]
 
-[PASTE ERROR]
-
-[PASTE .QMD]
-```
+## Part 6b: Debugging prompts
 
 If rendering works but looks poor:
 
-```text
-Keep the content and output format unchanged. Improve only the headings,
-spacing and chunk options. Return the complete revised .qmd file.
-```
+>Keep the content and output format unchanged. Improve only the headings,
+spacing and chunk options. Return the complete revised `.qmd` file.
 
-## Before you finish
+## Before you finish, check for the following
 
 - [ ] Valid YAML header
 - [ ] Closing backticks present
@@ -594,12 +621,12 @@ spacing and chunk options. Return the complete revised .qmd file.
 - [ ] File names sensible
 
 ::: {.callout-important}
-Copilot can draft the source. You remain responsible for the content, code, evidence and final output.
+Copilot can draft the source. But naturally, ***you*** are responsible for the content, code, evidence and final output.
 :::
 
-## Take-away
+# Summary
 
-### *Quarto* turns a readable source file into professional communication.
+## *Quarto* turns a readable source file into professional communication.
 
 - Markdown provides structure
 - YAML controls the output
@@ -616,16 +643,19 @@ Copilot can draft the source. You remain responsible for the content, code, evid
 
 ### Webpages
 
-- [Quarto](https://quarto.org/){target="_blank"}
 - [R Markdown](https://rmarkdown.rstudio.com/){target="_blank"}
+- [Quarto](https://quarto.org/){target="_blank"}
 - [tinytex (to render to pdf)](https://yihui.org/tinytex/){target="_blank"}
+- [Typst](https://typst.app/){target="_blank"}
 
 :::
 :::{.column}
 
-### Books
+### IDEs (Integrated Development Environment)
 
-- x
+- [RStudio](https://posit.co/products/open-source/rstudio){target="_blank"}
+- [Positron](https://positron.posit.co/){target="_blank"}
+  - The company *Posit* is slowly moving away from *RStudio* and towards *Positron*, just as it's moving away from *R Markdown* and towards *Quarto*
 
 :::
 ::::
@@ -636,4 +666,11 @@ Copilot can draft the source. You remain responsible for the content, code, evid
 - [Learning the R Tidyverse](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-the-r-tidyverse-24332729%3Ftrk%3Dshare_ent_url%26shareId%3Dm0xWIVqXR8quPBvRAJbm%252BQ%253D%253D){target="_blank"}
 - [Learning Markdown: Formatting Text without the Complexity](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-markdown-formatting-text-without-the-complexity%3Ftrk%3Dshare_ent_url%26shareId%3DVBhsFETRQ8SBoZTINms4tg%253D%253D){target="_blank"}
 - [Git Essential Training](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fgit-essential-training-25677984%3Ftrk%3Dshare_ent_url%26shareId%3D%252Bd4xxHopRxGlDGHqJseccQ%253D%253D){target="_blank"}
+  - (for collaboration; *git* is like *dropbox*, but with each step of the process )
+
+:::Aside
+Nothing on *R* in *Quarto* yet; just a course on [using *Python* in *quarto*](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdata-science-reporting-with-quarto-for-python%3Ftrk%3Dshare_ent_url%26shareId%3DLbFKOOX4TLSXrDE2E5C3IQ%253D%253D){target="_blank"}
+:::
+
+## Books
 
