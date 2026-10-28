@@ -11,21 +11,21 @@
     "href": "index.html#visual-editors",
     "title": "From analysis to communication with Quarto",
     "section": "Visual editors",
-    "text": "Visual editors\n\n\nExamples\n\nWord\nPowerPoint\nGoogle Docs\nCanva\n\n\nDownsides\n\nproprietary\nlocal formatting\n\n\nUpsides\n\nWYSIWYG\neasy to learn"
+    "text": "Visual editors\n\n\nExamples\n\nWord\nPowerPoint\nGoogle Docs\nCanva\n\n\nDownsides\n\nproprietary\nlocal formatting\n\n\nUpsides\n\nWhat you see is what you get\n\nWYSIWYG\n\neasy to learn"
   },
   {
     "objectID": "index.html#mark-up-systems",
     "href": "index.html#mark-up-systems",
     "title": "From analysis to communication with Quarto",
     "section": "Mark-up systems",
-    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\nTypst\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\n“steep” learning curve1\nrendering time\n\n\nTechnically, a shallow learning curve"
+    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\nTypst\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\n“steep” learning curve1\n\n\nTechnically, a shallow learning curve"
   },
   {
     "objectID": "index.html#markdown",
     "href": "index.html#markdown",
     "title": "From analysis to communication with Quarto",
     "section": "Markdown",
-    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Schwartz\nfelt raw html was onerous\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts natively to html\n\nits raison d’être\n\n\n\nUpsides\n\nplain text\neasy to…\n\nread\nlearn\nshare\nrender\n\n\n\nDownsides\n\nBy itself: Few bells and whistles\n\nBut R Markdown and Quarto add many back in\n\nnot fully WYSYWYG, I guess\n\nbut 90% of the way there\na small price to pay, in my view"
+    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Schwartz\nfelt raw html was onerous\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts natively to HTML\n\nits raison d’être\n\n\n\nUpsides\n\nplain text\neasy to…\n\nread\nlearn\nshare\nrender\n\n\n\nDownsides\n\nBy itself: Few bells and whistles\n\nBut R Markdown and Quarto add many back in\n\nnot fully WYSIWYG\n\nbut 90% of the way there\na small price to pay (in my own view)"
   },
   {
     "objectID": "index.html#scientific-publishing-systems",
@@ -39,7 +39,7 @@
     "href": "index.html#r-markdown-and-quarto",
     "title": "From analysis to communication with Quarto",
     "section": "R Markdown and Quarto",
-    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nTight integration with R\nStill widely used\n\n\nQuarto\n\nNewer, language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nDocuments, slides, websites, books, dashboards"
+    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nInseparable integration with R\n\n(you can’t render without R installed)\n\nStill widely used\n\n\nQuarto\n\nNewer, more language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nDocuments, slides, websites, books, dashboards\nStandalone (no a prior requirement to install R)"
   },
   {
     "objectID": "index.html#a-typical-workflow-for-quarto-and-r-markdown",

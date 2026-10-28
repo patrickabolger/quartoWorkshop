@@ -58,7 +58,7 @@ The Wider Picture
 ## Visual editors
 
 :::: {.columns}
-::: {.column width="32%"}
+::: {.column width="30%"}
 ### Examples
 
 - *Word*
@@ -67,15 +67,16 @@ The Wider Picture
 - *Canva*
 
 :::
-:::{.column width="32%"}
+:::{.column width="30%"}
 ### Downsides
 - proprietary
 - local formatting
 
 :::
-:::{.column width="33%"}
+:::{.column width="39%"}
 ### Upsides
-- WYSIWYG
+- *What you see is what you get*
+  - WYSIWYG
 - easy to learn
 
 :::
@@ -104,7 +105,6 @@ The Wider Picture
 ### Downsides
 
 - "steep" learning curve^[Technically, a shallow learning curve]
-- rendering time
 
 :::
 ::::
@@ -121,7 +121,7 @@ The Wider Picture
 - Hence, Mark***down***
   - *up* = complex
   - *down* = simple
-- converts natively to html
+- converts natively to HTML
   - its raison d'être
 
 :::
@@ -142,9 +142,9 @@ The Wider Picture
 
 - By itself: Few bells and whistles
   - But *R Markdown* and *Quarto* add many back in
-- not fully WYSYWYG, I guess
+- not fully WYSIWYG
   - but 90% of the way there
-  - a small price to pay, in my view
+  - a small price to pay (in my own view)
 
 :::
 ::::
@@ -179,7 +179,8 @@ Combine prose, code, and output specifications
 
 - Introduced reproducible documents to many *R* users
 - Uses `.Rmd` source files
-- Tight integration with *R*
+- Inseparable integration with *R*
+  - (you can't render without *R* installed)
 - Still widely used
 
 :::
@@ -187,11 +188,12 @@ Combine prose, code, and output specifications
 ::: {.column width="48%"}
 ### *Quarto*
 
-- Newer, language-neutral publishing system
+- Newer, more language-neutral publishing system
 - Uses `.qmd` source files
 - Works with *R*, *Python*, *Julia* and *Observable JS*
   - hence *Quarto* (the four languages)
 - Documents, slides, websites, books, dashboards
+- Standalone (no *a priori* requirement to install *R*)
 
 :::
 ::::
