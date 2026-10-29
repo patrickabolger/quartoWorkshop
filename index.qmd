@@ -335,7 +335,7 @@ These systems can export plain text into various formats, like documents (*Word*
 `{target="_blank"}` is actually specific to *Quarto Markdown*, and opens links in new tabs instead of the same tab
 :::
 
-## Markdown: formulas (with LaTeX)
+## Markdown: formulas (with LaTeX)^[Only in a few flavors of *Markdown*]
 
 ### LaTeX in Markdown
 
@@ -355,6 +355,25 @@ And in a little more detail:
 $$
 F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 $$
+
+## Markdown: tables^[example from https://www.tablesgenerator.com/]
+
+### raw Markdown
+
+```markdown
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
+```
+### Rendered
+
+| Tables   |      Are      |  Cool |
+|----------|:-------------:|------:|
+| col 1 is |  left-aligned | $1600 |
+| col 2 is |    centered   |   $12 |
+| col 3 is | right-aligned |    $1 |
 
 # Quarto file structure
 

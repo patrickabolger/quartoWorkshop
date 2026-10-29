@@ -1418,7 +1418,7 @@ Patrick Bolger
 </div>
 </section>
 <section id="markdown-formulas-with-latex" class="slide level2">
-<h2>Markdown: formulas (with LaTeX)</h2>
+<h2>Markdown: formulas (with LaTeX)<sup>1</sup></h2>
 <h3 id="latex-in-markdown">LaTeX in Markdown</h3>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a></a>This is the *F*-ratio: $F=\frac{MS_{between}}{MS_{within}}$</span>
 <span id="cb5-2"><a></a></span>
@@ -1431,7 +1431,43 @@ Patrick Bolger
 <p>And in a little more detail: <span class="math display">\[
 F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 \]</span></p>
-</section></section>
+<aside><ol class="aside-footnotes"><li id="fn3"><p>Only in a few flavors of <em>Markdown</em></p></li></ol></aside></section>
+<section id="markdown-tables" class="slide level2">
+<h2>Markdown: tables<sup>1</sup></h2>
+<h3 id="raw-markdown-4">raw Markdown</h3>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="pp">|</span> Tables   <span class="pp">|</span>      Are      <span class="pp">|</span>  Cool <span class="pp">|</span></span>
+<span id="cb6-2"><a></a><span class="pp">|----------|:-------------:|------:|</span></span>
+<span id="cb6-3"><a></a><span class="pp">|</span> col 1 is <span class="pp">|</span>  left-aligned <span class="pp">|</span> $1600 <span class="pp">|</span></span>
+<span id="cb6-4"><a></a><span class="pp">|</span> col 2 is <span class="pp">|</span>    centered   <span class="pp">|</span>   $12 <span class="pp">|</span></span>
+<span id="cb6-5"><a></a><span class="pp">|</span> col 3 is <span class="pp">|</span> right-aligned <span class="pp">|</span>    $1 <span class="pp">|</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<h3 id="rendered-5">Rendered</h3>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Tables</th>
+<th style="text-align: center;">Are</th>
+<th style="text-align: right;">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>col 1 is</td>
+<td style="text-align: center;">left-aligned</td>
+<td style="text-align: right;">$1600</td>
+</tr>
+<tr class="even">
+<td>col 2 is</td>
+<td style="text-align: center;">centered</td>
+<td style="text-align: right;">$12</td>
+</tr>
+<tr class="odd">
+<td>col 3 is</td>
+<td style="text-align: center;">right-aligned</td>
+<td style="text-align: right;">$1</td>
+</tr>
+</tbody>
+</table>
+<aside><ol class="aside-footnotes"><li id="fn4"><p>example from https://www.tablesgenerator.com/</p></li></ol></aside></section></section>
 <section>
 <section id="quarto-file-structure" class="title-slide slide level1 center">
 <h1>Quarto file structure</h1>
@@ -1439,22 +1475,22 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </section>
 <section id="anatomy-of-a-.qmd-file" class="slide level2">
 <h2>Anatomy of a <code>.qmd</code> file<sup>1</sup></h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a></a><span class="co">---</span></span>
-<span id="cb6-2"><a></a><span class="an">title:</span><span class="co"> &quot;My report&quot;</span></span>
-<span id="cb6-3"><a></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb6-4"><a></a><span class="co">---</span></span>
-<span id="cb6-5"><a></a></span>
-<span id="cb6-6"><a></a><span class="co">&lt;!-- above is the YAML header --&gt;</span></span>
-<span id="cb6-7"><a></a></span>
-<span id="cb6-8"><a></a><span class="fu"># Introduction</span></span>
-<span id="cb6-9"><a></a></span>
-<span id="cb6-10"><a></a>This is the **Markdown area**.</span>
-<span id="cb6-11"><a></a></span>
-<span id="cb6-12"><a></a><span class="co">&lt;!-- below is a code chunk --&gt;</span></span>
-<span id="cb6-13"><a></a></span>
-<span id="cb6-14"><a></a>``{r}</span>
-<span id="cb6-15"><a></a>summary(mtcars)</span>
-<span id="cb6-16"><a></a>``</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a></a><span class="co">---</span></span>
+<span id="cb7-2"><a></a><span class="an">title:</span><span class="co"> &quot;My report&quot;</span></span>
+<span id="cb7-3"><a></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb7-4"><a></a><span class="co">---</span></span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a><span class="co">&lt;!-- above is the YAML header --&gt;</span></span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a><span class="fu"># Introduction</span></span>
+<span id="cb7-9"><a></a></span>
+<span id="cb7-10"><a></a>This is the **Markdown area**.</span>
+<span id="cb7-11"><a></a></span>
+<span id="cb7-12"><a></a><span class="co">&lt;!-- below is a code chunk --&gt;</span></span>
+<span id="cb7-13"><a></a></span>
+<span id="cb7-14"><a></a>``{r}</span>
+<span id="cb7-15"><a></a>summary(mtcars)</span>
+<span id="cb7-16"><a></a>``</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1468,19 +1504,19 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </div>
 </div>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn3"><p><code>.Rmd</code> files differ in only minor ways</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn5"><p><code>.Rmd</code> files differ in only minor ways</p></li></ol></aside></section>
 <section id="yaml-header" class="slide level2">
 <h2>1. YAML header</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb7-1"><a></a><span class="pp">---</span></span>
-<span id="cb7-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Student wellbeing summary&quot;</span></span>
-<span id="cb7-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
-<span id="cb7-4"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb7-5"><a></a><span class="fu">format</span><span class="kw">:</span></span>
-<span id="cb7-6"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
-<span id="cb7-7"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
-<span id="cb7-8"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb8-1"><a></a><span class="pp">---</span></span>
+<span id="cb8-2"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Student wellbeing summary&quot;</span></span>
+<span id="cb8-3"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
+<span id="cb8-4"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb8-5"><a></a><span class="fu">format</span><span class="kw">:</span></span>
+<span id="cb8-6"><a></a><span class="at">  </span><span class="fu">html</span><span class="kw">:</span></span>
+<span id="cb8-7"><a></a><span class="at">    </span><span class="fu">toc</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb8-8"><a></a><span class="pp">---</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:60%;">
 <ul>
 <li>Located at the very top of the file</li>
@@ -1492,14 +1528,14 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 </section>
 <section id="markdown-area" class="slide level2">
 <h2>2. Markdown area</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a></a><span class="fu"># Introduction</span></span>
-<span id="cb8-2"><a></a></span>
-<span id="cb8-3"><a></a>This report summarises a small survey.</span>
-<span id="cb8-4"><a></a></span>
-<span id="cb8-5"><a></a><span class="fu">## Key findings</span></span>
-<span id="cb8-6"><a></a></span>
-<span id="cb8-7"><a></a><span class="ss">- </span>Most respondents reported...</span>
-<span id="cb8-8"><a></a><span class="ss">- </span>The clearest pattern was...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="fu"># Introduction</span></span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a>This report summarises a small survey.</span>
+<span id="cb9-4"><a></a></span>
+<span id="cb9-5"><a></a><span class="fu">## Key findings</span></span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a><span class="ss">- </span>Most respondents reported...</span>
+<span id="cb9-8"><a></a><span class="ss">- </span>The clearest pattern was...</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>Prose and structure</li>
 <li>Images, simple tables, links, and citations</li>
@@ -1509,13 +1545,13 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <section id="code-blocks" class="slide level2">
 <h2>3. Code blocks</h2>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb9-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb9-2"><a></a><span class="co">#| eval: false</span></span>
-<span id="cb9-3"><a></a><span class="co">#| label: fig-scatter</span></span>
-<span id="cb9-4"><a></a><span class="co">#| fig-cap: &quot;Miles per gallon by weight&quot;</span></span>
-<span id="cb9-5"><a></a></span>
-<span id="cb9-6"><a></a><span class="fu">plot</span>(mtcars<span class="sc">$</span>wt, mtcars<span class="sc">$</span>mpg)</span>
-<span id="cb9-7"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb10-1"><a></a><span class="in">```{r}</span></span>
+<span id="cb10-2"><a></a><span class="co">#| eval: false</span></span>
+<span id="cb10-3"><a></a><span class="co">#| label: fig-scatter</span></span>
+<span id="cb10-4"><a></a><span class="co">#| fig-cap: &quot;Miles per gallon by weight&quot;</span></span>
+<span id="cb10-5"><a></a></span>
+<span id="cb10-6"><a></a><span class="fu">plot</span>(mtcars<span class="sc">$</span>wt, mtcars<span class="sc">$</span>mpg)</span>
+<span id="cb10-7"><a></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <ul>
 <li>Fenced by three backticks</li>
@@ -1523,30 +1559,30 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><code>#|</code> lines are chunk options<sup>2</sup></li>
 <li>Output appears in the rendered document</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn4"><p>This would be <code>{python}</code>, <code>{julia}</code>, and <code>{ojs}</code> for <em>python</em>, <em>julia</em>, and <em>Observable JS</em>, respectively</p></li><li id="fn5"><p>The <code>eval: false</code> in the chunk options (<code>#|</code>) at top tells <em>R</em> not to run the code in that chunk. You wouldn’t normally include this option in a finished product unless you were teaching.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn6"><p>This would be <code>{python}</code>, <code>{julia}</code>, and <code>{ojs}</code> for <em>python</em>, <em>julia</em>, and <em>Observable JS</em>, respectively</p></li><li id="fn7"><p>The <code>eval: false</code> in the chunk options (<code>#|</code>) at top tells <em>R</em> not to run the code in that chunk. You wouldn’t normally include this option in a finished product unless you were teaching.</p></li></ol></aside></section>
 <section id="one-source-different-outputs" class="slide level2">
 <h2>One source, different outputs</h2>
 <p>Change the YAML rather than rewriting the content</p>
 <div class="columns">
 <div class="column" style="width:32%;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb10-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
-<span id="cb10-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
-<span id="cb10-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb10-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div><div class="column" style="width:32%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb11-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
 <span id="cb11-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
 <span id="cb11-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
-<span id="cb11-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb11-5"><a></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb11-6"><a></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb11-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> html</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div><div class="column" style="width:32%;">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb12-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
 <span id="cb12-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
 <span id="cb12-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
 <span id="cb12-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
-<span id="cb12-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> default</span></span>
-<span id="cb12-6"><a></a><span class="at">  </span><span class="fu">pptx</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb12-5"><a></a><span class="at">  </span><span class="fu">docx</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb12-6"><a></a><span class="at">  </span><span class="fu">typst</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div><div class="column" style="width:32%;">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb13-1"><a></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;How to use Quarto&quot;</span></span>
+<span id="cb13-2"><a></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">&quot;Patrick Bolger&quot;</span></span>
+<span id="cb13-3"><a></a><span class="fu">date</span><span class="kw">:</span><span class="at"> today</span></span>
+<span id="cb13-4"><a></a><span class="fu">format</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb13-5"><a></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span><span class="at"> default</span></span>
+<span id="cb13-6"><a></a><span class="at">  </span><span class="fu">pptx</span><span class="kw">:</span><span class="at"> default</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div></div>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
@@ -1761,7 +1797,7 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><label><input type="checkbox">Claims checked by you<sup>1</sup></label></li>
 <li><label><input type="checkbox">File names sensible</label></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn6"><p>Copilot can draft the source. But naturally, <strong><em>you</em></strong> are responsible for the content, code, evidence and final output.</p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn8"><p>Copilot can draft the source. But naturally, <strong><em>you</em></strong> are responsible for the content, code, evidence and final output.</p></li></ol></aside></section></section>
 <section>
 <section id="summary" class="title-slide slide level1 center">
 <h1>Summary</h1>
@@ -1789,7 +1825,7 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><a href="https://rmarkdown.rstudio.com/formats.html" target="_blank">full list for <em>R Markdown</em></a></li>
 <li><a href="https://quarto.org/docs/output-formats/all-formats.html" target="_blank">full list for <em>Quarto</em></a></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn7"><p><em>Pandoc</em> what converts <em>Markdown</em> to various formats</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn9"><p><em>Pandoc</em> what converts <em>Markdown</em> to various formats</p></li></ol></aside></section>
 <section id="webpages-and-books" class="slide level2">
 <h2>Webpages and books</h2>
 <div class="columns">
@@ -1823,7 +1859,7 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <div class="Aside">
 <p>Nothing on <em>R</em> in <em>Quarto</em> yet; just a course on <a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdata-science-reporting-with-quarto-for-python%3Ftrk%3Dshare_ent_url%26shareId%3DLbFKOOX4TLSXrDE2E5C3IQ%253D%253D" target="_blank">using <em>Python</em> in <em>quarto</em></a></p>
 </div>
-<aside><ol class="aside-footnotes"><li id="fn8"><p><a href="https://git-scm.com/" target="_blank"><em>Git</em></a> is a <a href="https://en.wikipedia.org/wiki/Distributed_version_control" target="_blank">distributed version-control system</a>. Combined with <a href="https://github.com/" target="_blank"><em>GitHub</em></a>, it functions like <em>Dropbox</em>, but with each step of the process explicitly controlled by each collaborator.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn10"><p><a href="https://git-scm.com/" target="_blank"><em>Git</em></a> is a <a href="https://en.wikipedia.org/wiki/Distributed_version_control" target="_blank">distributed version-control system</a>. Combined with <a href="https://github.com/" target="_blank"><em>GitHub</em></a>, it functions like <em>Dropbox</em>, but with each step of the process explicitly controlled by each collaborator.</p></li></ol></aside></section>
 <section id="more-linkedin-learning" class="slide level2">
 <h2>More LinkedIn Learning</h2>
 <h3 id="these-are-focused-on-the-3-programming-languages-besides-r-available-in-quarto">These are focused on the 3 programming languages besides <em>R</em> available in <em>Quarto</em></h3>
@@ -1832,7 +1868,7 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-julia%3Ftrk%3Dshare_ent_url%26shareId%3DkXUokYr1SHW8vx67BYXE7Q%253D%253D" target="_blank">The <em>Julia</em> programming language</a></li>
 <li><a href="https://www.linkedin.com/learning-login/share?account=36922300&amp;forceAccount=false&amp;redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdata-analytics-with-observable%3Ftrk%3Dshare_ent_url%26shareId%3DUNu7MtIFTpKcUNCWF4iAFQ%253D%253D" target="_blank"><em>Observable</em></a><sup>1</sup></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn9"><p><em>Observable</em> is the platform; <em>Observable JS</em> is the reactive JavaScript environment it uses. The <em>LinkedIn Learning</em> course is therefore relevant to <em>Quarto</em>’s <code>{ojs}</code> code blocks, although it may also cover features specific to the more general <em>Observable</em> platform.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn11"><p><em>Observable</em> is the platform; <em>Observable JS</em> is the reactive JavaScript environment it uses. The <em>LinkedIn Learning</em> course is therefore relevant to <em>Quarto</em>’s <code>{ojs}</code> code blocks, although it may also cover features specific to the more general <em>Observable</em> platform.</p></li></ol></aside></section>
 <section id="tutorials-from-posit" class="slide level2">
 <h2>Tutorials from <em>Posit</em></h2>
 <h3 id="specific">Specific</h3>
@@ -1850,7 +1886,7 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><a href="https://pkg.yihui.org/bookdown/" target="_blank"><em>bookdown: Authoring Books and Technical Documents with R Markdown</em></a></li>
 <li><a href="https://r4ds.hadley.nz/" target="_blank"><em>R for Data Science</em>, 2nd ed.</a><sup>1</sup></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn10"><p>This is not a book <strong><em>on</em></strong> <em>Quarto</em>, but rather an important, general book on <em>R</em> written <strong><em>in</em></strong> <em>Quarto</em>. That said, the last chapter is about <em>Quarto</em>. I can’t find any books devoted to teaching <em>Quarto</em> yet.</p></li></ol></aside></section>
+<aside><ol class="aside-footnotes"><li id="fn12"><p>This is not a book <strong><em>on</em></strong> <em>Quarto</em>, but rather an important, general book on <em>R</em> written <strong><em>in</em></strong> <em>Quarto</em>. That said, the last chapter is about <em>Quarto</em>. I can’t find any books devoted to teaching <em>Quarto</em> yet.</p></li></ol></aside></section>
 <section id="galleries-examples-of-output" class="slide level2">
 <h2>Galleries (examples of output)</h2>
 <h3 id="from-posit">From <em>Posit</em></h3>
@@ -1867,7 +1903,7 @@ F=\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}
 <li><a href="https://patrickabolger.github.io/ElemStatsLabManual/" target="_blank">A statistics lab manual</a> I wrote at Texas A&amp;M</li>
 <li><a href="https://psychopy.github.io/psychopy-edi-survey/" target="_blank">An EDI project</a> I worked on at <em>PsychoPy</em>/<em>Open Science Tools</em> at in <em>Psychology</em> at the <em>University of Nottingham</em></li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn11"><p>Note that the <em>Bookdown</em> hosting service will be <a href="https://posit.co/blog/bookdown-org-sunset" target="_blank">fully decommisioned</a> on 31 January 2027. Books will mostly migrate over to <a href="https://posit.co/products/enterprise/connect" target="_blank"><em>Posit Connect</em></a></p></li></ol></aside></section></section>
+<aside><ol class="aside-footnotes"><li id="fn13"><p>Note that the <em>Bookdown</em> hosting service will be <a href="https://posit.co/blog/bookdown-org-sunset" target="_blank">fully decommisioned</a> on 31 January 2027. Books will mostly migrate over to <a href="https://posit.co/products/enterprise/connect" target="_blank"><em>Posit Connect</em></a></p></li></ol></aside></section></section>
 <section id="thank-you" class="title-slide slide level1 center">
 <h1>Thank you!</h1>
 

@@ -80,8 +80,8 @@
     "objectID": "index.html#markdown-formulas-with-latex",
     "href": "index.html#markdown-formulas-with-latex",
     "title": "From analysis to communication with Quarto",
-    "section": "Markdown: formulas (with LaTeX)",
-    "text": "Markdown: formulas (with LaTeX)\nLaTeX in Markdown\nThis is the *F*-ratio: $F=\\frac{MS_{between}}{MS_{within}}$\n\nAnd in a little more detail:\n$$\nF=\\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}\n$$\nRendered\nThis is the F-ratio: \\(F=\\frac{MS_{between}}{MS_{within}}\\)\nAnd in a little more detail: \\[\nF=\\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}\n\\]"
+    "section": "Markdown: formulas (with LaTeX)1",
+    "text": "Markdown: formulas (with LaTeX)1\nLaTeX in Markdown\nThis is the *F*-ratio: $F=\\frac{MS_{between}}{MS_{within}}$\n\nAnd in a little more detail:\n$$\nF=\\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}\n$$\nRendered\nThis is the F-ratio: \\(F=\\frac{MS_{between}}{MS_{within}}\\)\nAnd in a little more detail: \\[\nF=\\frac{SS_{between}/df_{between}}{SS_{within}/df_{within}}\n\\]\nOnly in a few flavors of Markdown"
   },
   {
     "objectID": "index.html#anatomy-of-a-.qmd-file",
@@ -369,5 +369,12 @@
     "title": "From analysis to communication with Quarto",
     "section": "Part 6: Debugging prompts (2)",
     "text": "Part 6: Debugging prompts (2)\nIf rendering works but looks poor:\n\nKeep the content and output format unchanged. Improve only the headings, spacing and chunk options. Return the complete revised .qmd file."
+  },
+  {
+    "objectID": "index.html#markdown-tables",
+    "href": "index.html#markdown-tables",
+    "title": "From analysis to communication with Quarto",
+    "section": "Markdown: tables1",
+    "text": "Markdown: tables1\nraw Markdown\n| Tables   |      Are      |  Cool |\n|----------|:-------------:|------:|\n| col 1 is |  left-aligned | $1600 |\n| col 2 is |    centered   |   $12 |\n| col 3 is | right-aligned |    $1 |\nRendered\n\n\n\nTables\nAre\nCool\n\n\n\n\ncol 1 is\nleft-aligned\n$1600\n\n\ncol 2 is\ncentered\n$12\n\n\ncol 3 is\nright-aligned\n$1\n\n\n\nexample from https://www.tablesgenerator.com/"
   }
 ]
