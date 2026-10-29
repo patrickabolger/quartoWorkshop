@@ -53,8 +53,6 @@ execute:
 
 # Communication tools
 
-The Wider Picture
-
 ## Visual editors
 
 :::: {.columns}
@@ -102,7 +100,7 @@ The Wider Picture
 
 :::
 :::{.column width="33%"}
-### Downsides
+### Downside
 
 - "steep" learning curve^[Technically, a shallow learning curve]
 
@@ -171,6 +169,10 @@ Combine prose, code, and output specifications
 :::
 ::::
 
+::: {.callout-important}
+These systems can export plain text into various formats, like documents (*Word*, pdf), slide decks (*PowerPoint*, *slidy*, *beamer*, *revealjs*), websites, online books, e-books, data dashboards, etc.
+:::
+
 ## *R Markdown* and *Quarto*
 
 :::: {.columns}
@@ -180,7 +182,7 @@ Combine prose, code, and output specifications
 - Introduced reproducible documents to many *R* users
 - Uses `.Rmd` source files
 - Inseparable integration with *R*
-  - (you can't render without *R* installed)
+  - you can't render without *R* installed
 - Still widely used
 
 :::
@@ -192,8 +194,8 @@ Combine prose, code, and output specifications
 - Uses `.qmd` source files
 - Works with *R*, *Python*, *Julia* and *Observable JS*
   - hence *Quarto* (the four languages)
-- Documents, slides, websites, books, dashboards
-- Standalone (no *a priori* requirement to install *R*)
+- Standalone
+  - no *a priori* requirement to install *R*
 
 :::
 ::::
@@ -204,12 +206,21 @@ Combine prose, code, and output specifications
 2. Add
    a. Required
       1. YAML header
-   b. And one, or the other, or both
+   b. And one, or the other, or both of:
       1. *Markdown*
       2. code (or *Python*, etc.)
 3. Select **Render**
 4. The chosen output is rendered
 5. If necessary, edit the source, then render again
+
+## File-conversion processes
+
+- *Markdown* (`.md`) file > html
+- *R Markdown* (`.Rmd`)/*Quarto* (`.qmd`) > *Pandoc* > any of:
+  - html
+  - *Word*, pdf, *ePub*, *OpenDocument*
+  - *PowerPoint*, *Revealjs*, *Beamer*
+  - etc.
 
 # A quick intro to Markdown
 
@@ -347,7 +358,7 @@ $$
 
 # Quarto file structure
 
-## Anatomy of a `.qmd` file
+## Anatomy of a `.qmd` file^[`.Rmd` files differ in only minor ways]
 
 ```markdown
 ---
@@ -369,7 +380,7 @@ summary(mtcars)
 ```
 
 ::: {.callout-note}
-The code chunk should actually have 3 backticks, closed by 3 backticks as well. If I put 3 in for this demo, weird things happen. Also note that `<!-- these are unintepreted comments in markdown -->`
+The code chunk should actually have 3 backticks, closed by 3 backticks as well. If I put 3 in for this demo, weird things happen. Also note that `<!-- this is an unintepreted comment in the markdown area -->`, whereas `# this is an uninterpreted R comment in an R script or code chunk (in Quarto)`.
 :::
 
 
@@ -477,7 +488,7 @@ Not every design feature transfers perfectly between formats. Render early and i
 :::
 
 ::: {.callout-note}
-Rendering to `.pdf` requires that you have some version of *LaTeX* installed. the easiest way to do this is to install the R package *tinytex*, which installs a minimal version of *LaTeX*.
+Rendering to `.pdf` requires that you have some version of *LaTeX* installed. The easiest way to do this is to install the *R* package *tinytex*, which installs a minimal version of *LaTeX*. *Typst* gets around this, but is still in development.
 :::
 
 ::: aside
@@ -518,17 +529,13 @@ When you have multiple output formats, click `Render` at the top and choose the 
 :::
 ::::
 
-::: {.callout-warning}
+::: {.callout-tip}
 If you choose 2 output types, make them the same type of document (e.g., `docx` and `typst`, or `revealjs` and `pptx`). This minimises incompatibility issues.
 :::
 
-## Part 2: Choose a small, familiar topic. 
+## Part 2: Choose a small, familiar topic
 
-Aim for:
-
-- A title and format (YAML header)
-- Two or three sections (Markdown)
-- One short *R* code block (code chunk)
+This could be anything in or out of psychology
 
 ## Part 3: Create a project in *RStudio*
 
@@ -545,6 +552,12 @@ Aim for:
 2. **Context**: audience and purpose
 3. **Source**: content, data or code to use
 4. **Expectations**: exact format and constraints
+
+### Aim for:
+
+- A title and format (YAML header)
+- Two or three sections (Markdown)
+- One short *R* code block (code chunk)
 
 ::: {.callout-tip}
 Ask for the complete `.qmd` source in **one fenced code block**, with no missing sections and no invented data.
@@ -586,12 +599,16 @@ results, sources or packages. Finish with a three-item render checklist.
 ## Part 5: From *Copilot* to *Quarto*
 
 1. Inspect the response for invented claims or unnecessary packages
-2. Copy only the contents inside the code fence
+2. Copy only the contents inside the code fence (***see warning below***)
 3. In your default `.qmd`, delete all the starter text and save, typing in a reasonable file name
 4. Paste the contents from the code fence in *Copilot*
 5. Save again
 6. Select **Render**
 7. If there are errors, read them carefully, revise, and render again
+
+::: {.callout-warning}
+Use the copy icon. Don't use the mouse. If you do, you'll get all the line numbers, which will mess things up.
+:::
 
 ## Part 6a: Debugging prompts
 
@@ -612,29 +629,34 @@ spacing and chunk options. Return the complete revised `.qmd` file.
 
 ## Before you finish, check for the following
 
+### These are common AI issues
+
 - [ ] Valid YAML header
 - [ ] Closing backticks present
 - [ ] Required packages installed
 - [ ] Data actually available
 - [ ] Output renders
-- [ ] Claims checked by you
+- [ ] Claims checked by you^[Copilot can draft the source. But naturally, ***you*** are responsible for the content, code, evidence and final output.]
 - [ ] File names sensible
 
-::: {.callout-important}
-Copilot can draft the source. But naturally, ***you*** are responsible for the content, code, evidence and final output.
-:::
 
 # Summary
 
 ## *Quarto* turns a readable source file into professional communication.
 
-- Markdown provides structure
+- *Markdown* provides structure
 - YAML controls the output
 - Code blocks make results reproducible
-- Copilot can accelerate a minimal first draft
+- *MS Copilot* can accelerate a minimal first draft
 - Rendering and checking remain human tasks
 
 # Links
+
+## Possible outputs
+
+- [*Pandoc*](https://pandoc.org/){target="_blank"}^[*Pandoc* what converts *Markdown* to various formats]
+- [full list for *R Markdown*](https://rmarkdown.rstudio.com/formats.html){target="_blank"}
+- [full list for *Quarto*](https://quarto.org/docs/output-formats/all-formats.html){target="_blank"}
 
 ## Webpages and books
 
@@ -665,12 +687,43 @@ Copilot can draft the source. But naturally, ***you*** are responsible for the c
 - [Complete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fcomplete-guide-to-r-wrangling-visualizing-and-modeling-data%3Ftrk%3Dshare_ent_url%26shareId%3DpHygdm9ASziZV%252FewsqPBWw%253D%253D){target="_blank"}
 - [Learning the R Tidyverse](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-the-r-tidyverse-24332729%3Ftrk%3Dshare_ent_url%26shareId%3Dm0xWIVqXR8quPBvRAJbm%252BQ%253D%253D){target="_blank"}
 - [Learning Markdown: Formatting Text without the Complexity](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-markdown-formatting-text-without-the-complexity%3Ftrk%3Dshare_ent_url%26shareId%3DVBhsFETRQ8SBoZTINms4tg%253D%253D){target="_blank"}
-- [Git Essential Training](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fgit-essential-training-25677984%3Ftrk%3Dshare_ent_url%26shareId%3D%252Bd4xxHopRxGlDGHqJseccQ%253D%253D){target="_blank"}
-  - (for collaboration; *git* is like *dropbox*, but with each step of the process )
+- [Git Essential Training](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fgit-essential-training-25677984%3Ftrk%3Dshare_ent_url%26shareId%3D%252Bd4xxHopRxGlDGHqJseccQ%253D%253D){target="_blank"}^[[*Git*](https://git-scm.com/){target="_blank"} is a [distributed version-control system](https://en.wikipedia.org/wiki/Distributed_version_control){target="_blank"}. Combined with [*GitHub*](https://github.com/){target="_blank"}, it functions like *Dropbox*, but with each step of the process explicitly controlled by each collaborator.]
 
 :::Aside
 Nothing on *R* in *Quarto* yet; just a course on [using *Python* in *quarto*](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdata-science-reporting-with-quarto-for-python%3Ftrk%3Dshare_ent_url%26shareId%3DLbFKOOX4TLSXrDE2E5C3IQ%253D%253D){target="_blank"}
 :::
 
+## More LinkedIn Learning
+
+### These are focused on the 3 programming languages besides *R* available in *Quarto*
+
+- [The *Python* programming language](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fpython-essential-training-18764650%3Ftrk%3Dshare_ent_url%26shareId%3DbbRab25hT4aeLsSfcVRj2w%253D%253D){target="_blank"}
+- [The *Julia* programming language](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Flearning-julia%3Ftrk%3Dshare_ent_url%26shareId%3DkXUokYr1SHW8vx67BYXE7Q%253D%253D){target="_blank"}
+- [*Observable*](https://www.linkedin.com/learning-login/share?account=36922300&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Fdata-analytics-with-observable%3Ftrk%3Dshare_ent_url%26shareId%3DUNu7MtIFTpKcUNCWF4iAFQ%253D%253D){target="_blank"}^[*Observable* is the platform; *Observable JS* is the reactive JavaScript environment it uses. The *LinkedIn Learning* course is therefore relevant to *Quarto*’s `{ojs}` code blocks, although it may also cover features specific to the more general *Observable* platform.]
+
+## Tutorials from *Posit*
+
+### Specific
+- [*R Markdown*](https://rmarkdown.rstudio.com/lesson-1.html){target="_blank"}
+- [*Quarto*](https://quarto.org/docs/get-started/hello/rstudio.html){target="_blank"}
+
+### General
+[*Posit Academy*](https://academy.posit.co/){target="_blank"}
+
 ## Books
 
+- [*R Markdown: The definitive guide*](https://pkg.yihui.org/rmarkdown-book/){target="_blank"}
+- [*bookdown: Authoring Books and Technical Documents with R Markdown*](https://pkg.yihui.org/bookdown/){target="_blank"}
+- [*R for Data Science*, 2nd ed.](https://r4ds.hadley.nz/){target="_blank"}^[This is not a book ***on*** *Quarto*, but rather an important, general book on *R* written ***in*** *Quarto*. That said, the last chapter is about *Quarto*. I can't find any books devoted to teaching *Quarto* yet.]
+
+## Galleries (examples of output)
+
+### From *Posit*
+- [Gallery for *Quarto*](https://quarto.org/docs/gallery/){target="_blank"}
+- [Gallery for *R Markdown*](https://rmarkdown.rstudio.com/gallery.html){target="_blank"}
+  - [Main gallery for *Bookdown*](https://bookdown.org/)
+  - [Archive for *Bookdown*](https://bookdown.org/archive/)^[Note that the *Bookdown* hosting service will be [fully decommisioned](https://posit.co/blog/bookdown-org-sunset){target="_blank"} on 31 January 2027. Books will mostly migrate over to [*Posit Connect*](https://posit.co/products/enterprise/connect){target="_blank"}]
+
+### From me
+- [A statistics lab manual](https://patrickabolger.github.io/ElemStatsLabManual/){target="_blank"} I wrote at Texas A&M
+- [An EDI project](https://psychopy.github.io/psychopy-edi-survey/){target="_blank"}  I worked on at *PsychoPy*/*Open Science Tools* at in *Psychology* at the *University of Nottingham*

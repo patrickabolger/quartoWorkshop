@@ -18,7 +18,7 @@
     "href": "index.html#mark-up-systems",
     "title": "From analysis to communication with Quarto",
     "section": "Mark-up systems",
-    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\nTypst\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownsides\n\n“steep” learning curve1\n\n\nTechnically, a shallow learning curve"
+    "text": "Mark-up systems\n\n\nExamples\n\nHTML\nLaTeX\nTypst\n\n\nUpsides\n\nplain text\nopen-source\neasy to share\n\n\nDownside\n\n“steep” learning curve1\n\n\nTechnically, a shallow learning curve"
   },
   {
     "objectID": "index.html#markdown",
@@ -32,21 +32,21 @@
     "href": "index.html#scientific-publishing-systems",
     "title": "From analysis to communication with Quarto",
     "section": "Scientific publishing systems",
-    "text": "Scientific publishing systems\nCombine prose, code, and output specifications\n\n\nFor today (part of RStudio)\n\nR Markdown\nQuarto\n\n\nOthers\n\nJupyter Notebooks\nJupyter Books\nMyST Markdown"
+    "text": "Scientific publishing systems\nCombine prose, code, and output specifications\n\n\nFor today (part of RStudio)\n\nR Markdown\nQuarto\n\n\nOthers\n\nJupyter Notebooks\nJupyter Books\nMyST Markdown\n\n\n\n\n\n\n\n\nImportant\n\n\nThese systems can export plain text into various formats, like documents (Word, pdf), slide decks (PowerPoint, slidy, beamer, revealjs), websites, online books, e-books, data dashboards, etc."
   },
   {
     "objectID": "index.html#r-markdown-and-quarto",
     "href": "index.html#r-markdown-and-quarto",
     "title": "From analysis to communication with Quarto",
     "section": "R Markdown and Quarto",
-    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nInseparable integration with R\n\n(you can’t render without R installed)\n\nStill widely used\n\n\nQuarto\n\nNewer, more language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nDocuments, slides, websites, books, dashboards\nStandalone (no a priori requirement to install R)"
+    "text": "R Markdown and Quarto\n\n\nR Markdown\n\nIntroduced reproducible documents to many R users\nUses .Rmd source files\nInseparable integration with R\n\nyou can’t render without R installed\n\nStill widely used\n\n\nQuarto\n\nNewer, more language-neutral publishing system\nUses .qmd source files\nWorks with R, Python, Julia and Observable JS\n\nhence Quarto (the four languages)\n\nStandalone\n\nno a priori requirement to install R"
   },
   {
     "objectID": "index.html#a-typical-workflow-for-quarto-and-r-markdown",
     "href": "index.html#a-typical-workflow-for-quarto-and-r-markdown",
     "title": "From analysis to communication with Quarto",
     "section": "A typical workflow for Quarto and R Markdown",
-    "text": "A typical workflow for Quarto and R Markdown\n\nCreate a Quarto or R Markdown file in RStudio\nAdd\n\nRequired\n\nYAML header\n\nAnd one, or the other, or both\n\nMarkdown\ncode (or Python, etc.)\n\n\nSelect Render\nThe chosen output is rendered\nIf necessary, edit the source, then render again"
+    "text": "A typical workflow for Quarto and R Markdown\n\nCreate a Quarto or R Markdown file in RStudio\nAdd\n\nRequired\n\nYAML header\n\nAnd one, or the other, or both of:\n\nMarkdown\ncode (or Python, etc.)\n\n\nSelect Render\nThe chosen output is rendered\nIf necessary, edit the source, then render again"
   },
   {
     "objectID": "index.html#markdown-headings",
@@ -87,8 +87,8 @@
     "objectID": "index.html#anatomy-of-a-.qmd-file",
     "href": "index.html#anatomy-of-a-.qmd-file",
     "title": "From analysis to communication with Quarto",
-    "section": "Anatomy of a .qmd file",
-    "text": "Anatomy of a .qmd file\n---\ntitle: \"My report\"\nformat: html\n---\n\n&lt;!-- above is the YAML header --&gt;\n\n# Introduction\n\nThis is the **Markdown area**.\n\n&lt;!-- below is a code chunk --&gt;\n\n``{r}\nsummary(mtcars)\n``\n\n\n\n\n\n\nNote\n\n\nThe code chunk should actually have 3 backticks, closed by 3 backticks as well. If I put 3 in for this demo, weird things happen. Also note that &lt;!-- these are unintepreted comments in markdown --&gt;"
+    "section": "Anatomy of a .qmd file1",
+    "text": "Anatomy of a .qmd file1\n---\ntitle: \"My report\"\nformat: html\n---\n\n&lt;!-- above is the YAML header --&gt;\n\n# Introduction\n\nThis is the **Markdown area**.\n\n&lt;!-- below is a code chunk --&gt;\n\n``{r}\nsummary(mtcars)\n``\n\n\n\n\n\n\nNote\n\n\nThe code chunk should actually have 3 backticks, closed by 3 backticks as well. If I put 3 in for this demo, weird things happen. Also note that &lt;!-- this is an unintepreted comment in the markdown area --&gt;, whereas # this is an uninterpreted R comment in an R script or code chunk (in Quarto).\n\n\n\n.Rmd files differ in only minor ways"
   },
   {
     "objectID": "index.html#yaml-header",
@@ -116,7 +116,7 @@
     "href": "index.html#one-source-different-outputs",
     "title": "From analysis to communication with Quarto",
     "section": "One source, different outputs",
-    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  typst: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. the easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX.\n\n\n\n\n\nWhen you have multiple output formats, click Render at the top and choose the output from the drop-down menu"
+    "text": "One source, different outputs\nChange the YAML rather than rewriting the content\n\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: html\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  docx: default\n  typst: default\n\ntitle: \"How to use Quarto\"\nauthor: \"Patrick Bolger\"\ndate: today\nformat: \n  revealjs: default\n  pptx: default\n\n\n\n\n\n\n\nWarning\n\n\nNot every design feature transfers perfectly between formats. Render early and inspect the result.\n\n\n\n\n\n\n\n\n\nNote\n\n\nRendering to .pdf requires that you have some version of LaTeX installed. The easiest way to do this is to install the R package tinytex, which installs a minimal version of LaTeX. Typst gets around this, but is still in development.\n\n\n\n\n\nWhen you have multiple output formats, click Render at the top and choose the output from the drop-down menu"
   },
   {
     "objectID": "index.html#your-task-choose-a-minimal-document",
@@ -200,7 +200,7 @@
     "href": "index.html#linkedin-learning-where-you-can-earn-badges-to-put-on-your-cv",
     "title": "From analysis to communication with Quarto",
     "section": "LinkedIn Learning (where you can earn badges to put on your CV)",
-    "text": "LinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training\n\n(for collaboration; git is like dropbox, but with each step of the process )\n\n\n\nNothing on R in Quarto yet; just a course on using Python in quarto"
+    "text": "LinkedIn Learning (where you can earn badges to put on your CV)\n\nComplete Guide to R: Wrangling, Visualizing, and Modeling Data (R Basics)\nLearning the R Tidyverse\nLearning Markdown: Formatting Text without the Complexity\nGit Essential Training1\n\n\nNothing on R in Quarto yet; just a course on using Python in quarto\n\nGit is a distributed version-control system. Combined with GitHub, it functions like Dropbox, but with each step of the process explicitly controlled by each collaborator."
   },
   {
     "objectID": "index.html#part-1",
@@ -228,7 +228,7 @@
     "href": "index.html#books",
     "title": "From analysis to communication with Quarto",
     "section": "Books",
-    "text": "Books"
+    "text": "Books\n\nR Markdown: The definitive guide\nbookdown: Authoring Books and Technical Documents with R Markdown\nR for Data Science, 2nd ed.1\n\nThis is not a book on Quarto, but rather an important, general book on R written in Quarto. That said, the last chapter is about Quarto. I can’t find any books devoted to teaching Quarto yet."
   },
   {
     "objectID": "index.html#debugging-prompts-1",
@@ -249,21 +249,21 @@
     "href": "index.html#before-you-finish-check-for-the-following",
     "title": "From analysis to communication with Quarto",
     "section": "Before you finish, check for the following",
-    "text": "Before you finish, check for the following\n\nValid YAML header\nClosing backticks present\nRequired packages installed\nData actually available\nOutput renders\nClaims checked by you\nFile names sensible\n\n\n\n\n\n\n\nImportant\n\n\nCopilot can draft the source. But naturally, you are responsible for the content, code, evidence and final output."
+    "text": "Before you finish, check for the following\nThese are common AI issues\n\nValid YAML header\nClosing backticks present\nRequired packages installed\nData actually available\nOutput renders\nClaims checked by you1\nFile names sensible\n\nCopilot can draft the source. But naturally, you are responsible for the content, code, evidence and final output."
   },
   {
     "objectID": "index.html#quarto-turns-a-readable-source-file-into-professional-communication.",
     "href": "index.html#quarto-turns-a-readable-source-file-into-professional-communication.",
     "title": "From analysis to communication with Quarto",
     "section": "Quarto turns a readable source file into professional communication.",
-    "text": "Quarto turns a readable source file into professional communication.\n\nMarkdown provides structure\nYAML controls the output\nCode blocks make results reproducible\nCopilot can accelerate a minimal first draft\nRendering and checking remain human tasks"
+    "text": "Quarto turns a readable source file into professional communication.\n\nMarkdown provides structure\nYAML controls the output\nCode blocks make results reproducible\nMS Copilot can accelerate a minimal first draft\nRendering and checking remain human tasks"
   },
   {
     "objectID": "index.html#part-1-pick-1-or-2-output-types",
     "href": "index.html#part-1-pick-1-or-2-output-types",
     "title": "From analysis to communication with Quarto",
     "section": "Part 1: Pick 1 or 2 output types",
-    "text": "Part 1: Pick 1 or 2 output types\n\n\nnon-pdfs\n\noutput: html\n\nwebpage\n\noutput: revealjs\n\nhtml slide deck\n\noutput: docx\n\nMS Word\n\noutput: pptx\n\nMS PowerPoint\n\n\n\noutput: pdf (more difficult pdfs)\n\nthis traditionally required installing LaTeX\neasiest to use the tinytex package in R\nbut not today, unless you already have LaTeX installed\n\noutput: typst (easier pdfs)\n\nQuarto can use Typst now\nTypst comes built in to Quarto\nNew and under development\n\n\n\n\n\n\n\n\nWarning\n\n\nIf you choose 2 output types, make them the same type of document (e.g., docx and typst, or revealjs and pptx). This minimises incompatibility issues."
+    "text": "Part 1: Pick 1 or 2 output types\n\n\nnon-pdfs\n\noutput: html\n\nwebpage\n\noutput: revealjs\n\nhtml slide deck\n\noutput: docx\n\nMS Word\n\noutput: pptx\n\nMS PowerPoint\n\n\n\noutput: pdf (more difficult pdfs)\n\nthis traditionally required installing LaTeX\neasiest to use the tinytex package in R\nbut not today, unless you already have LaTeX installed\n\noutput: typst (easier pdfs)\n\nQuarto can use Typst now\nTypst comes built in to Quarto\nNew and under development\n\n\n\n\n\n\n\n\nTip\n\n\nIf you choose 2 output types, make them the same type of document (e.g., docx and typst, or revealjs and pptx). This minimises incompatibility issues."
   },
   {
     "objectID": "index.html#part-3-create-a-project-in-rstudio",
@@ -284,14 +284,14 @@
     "href": "index.html#part-4-build-the-prompt-from-four-parts",
     "title": "From analysis to communication with Quarto",
     "section": "Part 4: Build the prompt from four parts",
-    "text": "Part 4: Build the prompt from four parts\n\nGoal: what should Copilot create?\nContext: audience and purpose\nSource: content, data or code to use\nExpectations: exact format and constraints\n\n\n\n\n\n\n\nTip\n\n\nAsk for the complete .qmd source in one fenced code block, with no missing sections and no invented data."
+    "text": "Part 4: Build the prompt from four parts\n\nGoal: what should Copilot create?\nContext: audience and purpose\nSource: content, data or code to use\nExpectations: exact format and constraints\n\nAim for:\n\nA title and format (YAML header)\nTwo or three sections (Markdown)\nOne short R code block (code chunk)\n\n\n\n\n\n\n\nTip\n\n\nAsk for the complete .qmd source in one fenced code block, with no missing sections and no invented data."
   },
   {
     "objectID": "index.html#part-5-from-copilot-to-quarto",
     "href": "index.html#part-5-from-copilot-to-quarto",
     "title": "From analysis to communication with Quarto",
     "section": "Part 5: From Copilot to Quarto",
-    "text": "Part 5: From Copilot to Quarto\n\nInspect the response for invented claims or unnecessary packages\nCopy only the contents inside the code fence\nIn your default .qmd, delete all the starter text and save, typing in a reasonable file name\nPaste the contents from the code fence in Copilot\nSave again\nSelect Render\nIf there are errors, read them carefully, revise, and render again"
+    "text": "Part 5: From Copilot to Quarto\n\nInspect the response for invented claims or unnecessary packages\nCopy only the contents inside the code fence (see warning below)\nIn your default .qmd, delete all the starter text and save, typing in a reasonable file name\nPaste the contents from the code fence in Copilot\nSave again\nSelect Render\nIf there are errors, read them carefully, revise, and render again\n\n\n\n\n\n\n\nWarning\n\n\nUse the copy icon. Don’t use the mouse. If you do, you’ll get all the line numbers, which will mess things up."
   },
   {
     "objectID": "index.html#part-6a-debugging-prompts",
@@ -306,5 +306,54 @@
     "title": "From analysis to communication with Quarto",
     "section": "Part 6b: Debugging prompts",
     "text": "Part 6b: Debugging prompts\nIf rendering works but looks poor:\n\nKeep the content and output format unchanged. Improve only the headings, spacing and chunk options. Return the complete revised .qmd file."
+  },
+  {
+    "objectID": "index.html#more-linkedin-learning",
+    "href": "index.html#more-linkedin-learning",
+    "title": "From analysis to communication with Quarto",
+    "section": "More LinkedIn Learning",
+    "text": "More LinkedIn Learning\nThese are focused on the 3 programming languages besides R available in Quarto\n\nThe Python programming language\nThe Julia programming language\nObservable1\n\nObservable is the platform; Observable JS is the reactive JavaScript environment it uses. The LinkedIn Learning course is therefore relevant to Quarto’s {ojs} code blocks, although it may also cover features specific to the more general Observable platform."
+  },
+  {
+    "objectID": "index.html#file-conversion-processes",
+    "href": "index.html#file-conversion-processes",
+    "title": "From analysis to communication with Quarto",
+    "section": "File-conversion processes",
+    "text": "File-conversion processes\n\nMarkdown (.md) file &gt; html\nR Markdown (.Rmd)/Quarto (.qmd) &gt; Pandoc &gt; any of:\n\nhtml\nWord, pdf, ePub, OpenDocument\nPowerPoint, Revealjs, Beamer\netc."
+  },
+  {
+    "objectID": "index.html#possible-outputs",
+    "href": "index.html#possible-outputs",
+    "title": "From analysis to communication with Quarto",
+    "section": "Possible outputs",
+    "text": "Possible outputs\n\nPandoc1\nfull list for R Markdown\nfull list for Quarto\n\nPandoc what converts Markdown to various formats"
+  },
+  {
+    "objectID": "index.html#galleries-examples-of-output",
+    "href": "index.html#galleries-examples-of-output",
+    "title": "From analysis to communication with Quarto",
+    "section": "Galleries (examples of output)",
+    "text": "Galleries (examples of output)\nFrom Posit\n\nGallery for Quarto\nGallery for R Markdown\n\nMain gallery for Bookdown\nArchive for Bookdown1\n\n\nFrom me\n\nA statistics lab manual I wrote at Texas A&M\nAn EDI project I worked on at PsychoPy/Open Science Tools at in Psychology at the University of Nottingham\n\n\n\nNote that the Bookdown hosting service will be fully decommisioned on 31 January 2027. Books will mostly migrate over to Posit Connect"
+  },
+  {
+    "objectID": "index.html#other-tutorials",
+    "href": "index.html#other-tutorials",
+    "title": "From analysis to communication with Quarto",
+    "section": "Other tutorials",
+    "text": "Other tutorials\n\n*Quarto"
+  },
+  {
+    "objectID": "index.html#tutorials-from-posit",
+    "href": "index.html#tutorials-from-posit",
+    "title": "From analysis to communication with Quarto",
+    "section": "Tutorials from Posit",
+    "text": "Tutorials from Posit\nSpecific\n\nR Markdown\nQuarto\n\nGeneral\nPosit Academy"
+  },
+  {
+    "objectID": "index.html#part-2-choose-a-small-familiar-topic",
+    "href": "index.html#part-2-choose-a-small-familiar-topic",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 2: Choose a small, familiar topic",
+    "text": "Part 2: Choose a small, familiar topic\nThis could be anything in or out of psychology"
   }
 ]
