@@ -114,7 +114,7 @@ execute:
 
 ### Origin (2004)
 
-- [John Gruber](https://en.wikipedia.org/wiki/John_Gruber){target="_blank"} & [Aaron Schwartz](https://en.wikipedia.org/wiki/Aaron_Swartz){target="_blank"}
+- [John Gruber](https://en.wikipedia.org/wiki/John_Gruber){target="_blank"} & [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz){target="_blank"}^[RIP]
 - felt raw html was onerous
 - Hence, Mark***down***
   - *up* = complex

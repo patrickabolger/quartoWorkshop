@@ -25,7 +25,7 @@
     "href": "index.html#markdown",
     "title": "From analysis to communication with Quarto",
     "section": "Markdown",
-    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Schwartz\nfelt raw html was onerous\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts natively to HTML\n\nits raison d’être\n\n\n\nUpsides\n\nplain text\neasy to…\n\nread\nlearn\nshare\nrender\n\n\n\nDownsides\n\nBy itself: Few bells and whistles\n\nBut R Markdown and Quarto add many back in\n\nnot fully WYSIWYG\n\nbut 90% of the way there\na small price to pay (in my own view)"
+    "text": "Markdown\n\n\nOrigin (2004)\n\nJohn Gruber & Aaron Swartz1\nfelt raw html was onerous\nHence, Markdown\n\nup = complex\ndown = simple\n\nconverts natively to HTML\n\nits raison d’être\n\n\n\nUpsides\n\nplain text\neasy to…\n\nread\nlearn\nshare\nrender\n\n\n\nDownsides\n\nBy itself: Few bells and whistles\n\nBut R Markdown and Quarto add many back in\n\nnot fully WYSIWYG\n\nbut 90% of the way there\na small price to pay (in my own view)\n\n\n\nRIP"
   },
   {
     "objectID": "index.html#scientific-publishing-systems",
