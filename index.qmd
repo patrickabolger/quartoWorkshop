@@ -610,7 +610,7 @@ results, sources or packages. Finish with a three-item render checklist.
 Use the copy icon. Don't use the mouse. If you do, you'll get all the line numbers, which will mess things up.
 :::
 
-## Part 6a: Debugging prompts
+## Part 6: Debugging prompts (1)
 
 If rendering fails, paste the **exact error** into Copilot:
 
@@ -620,7 +620,7 @@ If rendering fails, paste the **exact error** into Copilot:
 >
 >[UPLOAD `.QMD`]
 
-## Part 6b: Debugging prompts
+## Part 6: Debugging prompts (2)
 
 If rendering works but looks poor:
 

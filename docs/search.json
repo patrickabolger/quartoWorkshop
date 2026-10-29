@@ -355,5 +355,19 @@
     "title": "From analysis to communication with Quarto",
     "section": "Part 2: Choose a small, familiar topic",
     "text": "Part 2: Choose a small, familiar topic\nThis could be anything in or out of psychology"
+  },
+  {
+    "objectID": "index.html#part-6-debugging-prompts-1",
+    "href": "index.html#part-6-debugging-prompts-1",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 6: Debugging prompts (1)",
+    "text": "Part 6: Debugging prompts (1)\nIf rendering fails, paste the exact error into Copilot:\n\nThis Quarto document fails to render. Explain the error in plain English, then return the smallest corrected version. Do not add new packages or features.\n[PASTE ERROR]\n[UPLOAD .QMD]"
+  },
+  {
+    "objectID": "index.html#part-6-debugging-prompts-2",
+    "href": "index.html#part-6-debugging-prompts-2",
+    "title": "From analysis to communication with Quarto",
+    "section": "Part 6: Debugging prompts (2)",
+    "text": "Part 6: Debugging prompts (2)\nIf rendering works but looks poor:\n\nKeep the content and output format unchanged. Improve only the headings, spacing and chunk options. Return the complete revised .qmd file."
   }
 ]
