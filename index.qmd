@@ -721,8 +721,8 @@ Nothing on *R* in *Quarto* yet; just a course on [using *Python* in *quarto*](ht
 ### From *Posit*
 - [Gallery for *Quarto*](https://quarto.org/docs/gallery/){target="_blank"}
 - [Gallery for *R Markdown*](https://rmarkdown.rstudio.com/gallery.html){target="_blank"}
-  - [Main gallery for *Bookdown*](https://bookdown.org/)
-  - [Archive for *Bookdown*](https://bookdown.org/archive/)^[Note that the *Bookdown* hosting service will be [fully decommisioned](https://posit.co/blog/bookdown-org-sunset){target="_blank"} on 31 January 2027. Books will mostly migrate over to [*Posit Connect*](https://posit.co/products/enterprise/connect){target="_blank"}]
+  - [Main gallery for *Bookdown*](https://bookdown.org/){target="_blank"}
+  - [Archive for *Bookdown*](https://bookdown.org/archive/){target="_blank"}^[Note that the *Bookdown* hosting service will be [fully decommisioned](https://posit.co/blog/bookdown-org-sunset){target="_blank"} on 31 January 2027. Books will mostly migrate over to [*Posit Connect*](https://posit.co/products/enterprise/connect){target="_blank"}]
 
 ### From me
 - [A statistics lab manual](https://patrickabolger.github.io/ElemStatsLabManual/){target="_blank"} I wrote at Texas A&M
