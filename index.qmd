@@ -727,3 +727,5 @@ Nothing on *R* in *Quarto* yet; just a course on [using *Python* in *quarto*](ht
 ### From me
 - [A statistics lab manual](https://patrickabolger.github.io/ElemStatsLabManual/){target="_blank"} I wrote at Texas A&M
 - [An EDI project](https://psychopy.github.io/psychopy-edi-survey/){target="_blank"}  I worked on at *PsychoPy*/*Open Science Tools* at in *Psychology* at the *University of Nottingham*
+
+# Thank you!
